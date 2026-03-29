@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials — BillionaireCircuit™</title>
+    <meta name="description" content="See what operators are saying about BillionaireCircuit™ wealth systems and playbooks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Testimonials — BillionaireCircuit™">
+    <meta property="og:description" content="Real feedback from operators building wealth with BillionaireCircuit™ systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774734022/bc-website/assets_logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Testimonials — BillionaireCircuit™">
+    <meta name="twitter:description" content="Real feedback from operators building wealth with BillionaireCircuit™ systems.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-hero { min-height: 45vh; display: flex; align-items: flex-end; padding: 140px 0 48px; }
+        .test-hero h1 { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(32px, 5vw, 56px); color: #FFD700; text-transform: uppercase; line-height: 0.95; margin-bottom: 12px; }
+        .test-hero p { font-size: 16px; color: rgba(255,255,255,0.45); max-width: 480px; }
+
+        .test-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 60px 0; border-top: 1px solid rgba(255,215,0,0.06); border-bottom: 1px solid rgba(255,215,0,0.06); margin-bottom: 60px; text-align: center; }
+        .test-stat-num { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 32px; color: #FFD700; }
+        .test-stat-label { font-size: 11px; color: rgba(255,255,255,0.30); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px; }
+
+        .test-featured { border: 1px solid rgba(255,215,0,0.20); padding: 48px 40px; margin-bottom: 48px; position: relative; background: rgba(255,215,0,0.02); }
+        .test-featured .test-quote { font-size: 18px; color: rgba(255,255,255,0.70); max-width: 640px; }
+        .test-featured::before { content: '"'; position: absolute; top: 16px; right: 24px; font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 72px; color: rgba(255,215,0,0.06); line-height: 1; }
+
+        .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .test-card { border: 1px solid rgba(255,215,0,0.10); padding: 32px 24px; position: relative; transition: all 0.3s; }
+        .test-card:hover { border-color: rgba(255,215,0,0.25); background: rgba(255,215,0,0.02); }
+        .test-card::before { content: '"'; position: absolute; top: 12px; right: 16px; font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 48px; color: rgba(255,215,0,0.06); line-height: 1; }
+        .test-stars { color: #FFD700; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+        .test-quote { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .test-author { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 12px; color: #FFD700; text-transform: uppercase; }
+        .test-product { font-size: 11px; color: rgba(255,255,255,0.30); margin-top: 4px; }
+
+        /* SUBMIT FORM */
+        .submit-section { background: #050505; }
+        .submit-form { max-width: 560px; margin: 0 auto; }
+        .submit-form label { display: block; font-size: 13px; color: rgba(255,255,255,0.50); margin-bottom: 6px; margin-top: 20px; }
+        .submit-form input, .submit-form textarea, .submit-form select {
+            width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,215,0,0.15); color: #fff;
+            font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none;
+            transition: border-color 0.3s;
+        }
+        .submit-form input:focus, .submit-form textarea:focus, .submit-form select:focus { border-color: rgba(255,215,0,0.40); }
+        .submit-form input::placeholder, .submit-form textarea::placeholder { color: rgba(255,255,255,0.20); }
+        .submit-form textarea { min-height: 120px; resize: vertical; }
+        .submit-form select { appearance: none; cursor: pointer; }
+        .submit-form select option { background: #111; color: #fff; }
+        .submit-success { display: none; text-align: center; padding: 32px; color: #FFD700; font-family: 'Unbounded', sans-serif; font-size: 16px; }
+
+        @media (max-width: 1024px) { .test-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .test-grid { grid-template-columns: 1fr; } .test-stats { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+    <!-- Google Analytics — replace GA_MEASUREMENT_ID with your tracking ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap" id="nav">
+    <nav class="nav-pill">
+        <a href="index.html"><img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774734022/bc-website/assets_logo.png" alt="BB" class="nav-logo"></a>
+        <div class="nav-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="https://instagram.com/bilionare.circuit" target="_blank">Instagram</a>
+        </div>
+        <a href="index.html#freebie" class="nav-cta">Free Guides</a>
+        <div class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section class="test-hero">
+    <div class="container">
+        <p class="eyebrow reveal">What Operators Are Saying</p>
+        <h1 class="reveal">Results Speak<br>Louder Than<br>Faces.</h1>
+        <p class="reveal">Real feedback from operators building wealth quietly with BillionaireCircuit™ systems.</p>
+        <div class="social-proof reveal" style="margin-top:24px;">
+            <div class="avatar-stack">
+                <img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774735003/bc-website/assets_avatars_a1.jpg" alt="">
+                <img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774735005/bc-website/assets_avatars_a2.jpg" alt="">
+                <img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774735006/bc-website/assets_avatars_a3.jpg" alt="">
+                <img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774735007/bc-website/assets_avatars_a4.jpg" alt="">
+                <img src="https://res.cloudinary.com/djkhnyfb6/image/upload/v1774735008/bc-website/assets_avatars_a5.jpg" alt="">
+            </div>
+            <div class="social-proof-text"><strong>2,400+</strong> operators already inside</div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad" style="padding-top:0">
+    <div class="container">
+
+        <div class="test-stats reveal">
+            <div><div class="test-stat-num">4.9</div><div class="test-stat-label">Avg Rating</div></div>
+            <div><div class="test-stat-num">700+</div><div class="test-stat-label">Pages Read</div></div>
+            <div><div class="test-stat-num">8</div><div class="test-stat-label">playbooks</div></div>
+            <div><div class="test-stat-num">100%</div><div class="test-stat-label">Actionable</div></div>
+        </div>
+
+        <!-- Featured -->
+        <div class="test-featured reveal">
+            <div class="test-stars">★★★★★</div>
+            <div class="test-quote">"The Sovereign Wealth Masterclass is different. 307 pages of actual frameworks — not motivational fluff. I implemented Protocol 3 in Week 1 and landed my first $5K client by Week 3."</div>
+            <div class="test-author">Anonymous Operator</div>
+            <div class="test-product">Sovereign Wealth Masterclass — $297.99</div>
+        </div>
+
+        <!-- Grid — loaded from testimonials.json -->
+        <div class="test-grid" id="testimonialGrid">
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"The Faceless Empire Quickstart literally changed my life in 7 days. Day 1: picked my niche. Day 7: made my first sale."</div>
+                <div class="test-author">@silent.builder</div>
+                <div class="test-product">Faceless Empire Quickstart — Free</div>
+            </div>
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"The 7-Figure Activation Protocol is the best free resource I've ever downloaded. Three protocols, zero fluff."</div>
+                <div class="test-author">@mindset.operator</div>
+                <div class="test-product">7-Figure Activation Protocol — Free</div>
+            </div>
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"AI Profit Pipelines paid for itself in 48 hours. Pipeline 2 alone is worth 10x the price."</div>
+                <div class="test-author">@auto.income</div>
+                <div class="test-product">AI Profit Pipelines — $9.99</div>
+            </div>
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"Went from $0 to $3,200/month in 91 days. Faceless. Automated. Exactly as promised."</div>
+                <div class="test-author">@empire.anon</div>
+                <div class="test-product">Faceless Empire Blueprint — $59.99</div>
+            </div>
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"The Codex showed me why I plateaued. Chapter 2 alone fixed my positioning. Now at $12K/month."</div>
+                <div class="test-author">@codex.operator</div>
+                <div class="test-product">High-Income Freelancer Codex — $79</div>
+            </div>
+
+            <div class="test-card reveal">
+                <div class="test-stars">★★★★★</div>
+                <div class="test-quote">"Bought the full stack. Read all 700+ pages. Every single playbook delivers. This brand operates different."</div>
+                <div class="test-author">@full.stack.op</div>
+                <div class="test-product">Complete Library</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SUBMIT YOUR TESTIMONIAL -->
+<section class="section-pad submit-section">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:40px;" class="reveal">
+            <p class="eyebrow">Share Your Results</p>
+            <h2 style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(24px,4vw,36px);color:#FFD700;text-transform:uppercase;margin-bottom:8px;">Submit Your Testimonial</h2>
+            <p style="font-size:14px;color:rgba(255,255,255,0.42);max-width:440px;margin:0 auto;">Used a BillionaireCircuit™ playbook? Share your experience. The best testimonials get featured.</p>
+        </div>
+
+        <form class="submit-form reveal" id="testimonialForm">
+            <label>Your Instagram Handle (optional)</label>
+            <input type="text" placeholder="@your.handle" id="tHandle">
+
+            <label>Which playbook did you use?</label>
+            <select id="tProduct">
+                <option value="">Select an playbook...</option>
+                <option>7-Figure Activation Protocol</option>
+                <option>Faceless Empire Quickstart</option>
+                <option>AI Profit Pipelines</option>
+                <option>10 Low-Effort High-Yield Moves</option>
+                <option>Money Moves Checklist</option>
+                <option>Faceless Empire Blueprint</option>
+                <option>High-Income Freelancer Codex</option>
+                <option>Sovereign Wealth Masterclass</option>
+            </select>
+
+            <label>Your experience / results</label>
+            <textarea placeholder="What happened after you read it? Any specific results, income numbers, or breakthroughs?" id="tQuote"></textarea>
+
+            <label>Rating</label>
+            <select id="tRating">
+                <option value="5">★★★★★ (5 stars)</option>
+                <option value="4">★★★★ (4 stars)</option>
+                <option value="3">★★★ (3 stars)</option>
+            </select>
+
+            <label>Your email (for verification only — won't be shown)</label>
+            <input type="email" placeholder="your@email.com" id="tEmail">
+
+            <div style="margin-top:24px;">
+                <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Submit Testimonial</button>
+            </div>
+        </form>
+
+        <div class="submit-success" id="submitSuccess">
+            Thank you! Your testimonial is under review.<br>We'll feature it once verified.
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section-pad" style="text-align:center;">
+    <div class="container reveal">
+        <p class="eyebrow">Join Them</p>
+        <h2 style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(24px,4vw,36px);color:#FFD700;text-transform:uppercase;margin-bottom:16px;">Start With the Free Guides</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,0.45);margin-bottom:32px;max-width:420px;margin-left:auto;margin-right:auto;">Download the 7-Figure Activation Protocol + Faceless Empire Quickstart. Zero cost.</p>
+        <a href="index.html#freebie" class="btn-primary">Get Free Guides</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">BillionaireCircuit™</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="https://instagram.com/bilionare.circuit" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-marquee">
+        <div class="footer-marquee-track">
+            <span class="footer-marquee-text">BillionaireCircuit™</span>
+            <span class="footer-marquee-text">BillionaireCircuit™</span>
+            <span class="footer-marquee-text">BillionaireCircuit™</span>
+            <span class="footer-marquee-text">BillionaireCircuit™</span>
+        </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 BillionaireCircuit™</div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+        if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 60); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Nav scroll
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50));
+
+// Testimonial form submission — saves to localStorage for now
+// TODO: Connect to a backend (Google Sheets, Airtable, or custom API)
+document.getElementById('testimonialForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const testimonial = {
+        handle: document.getElementById('tHandle').value,
+        product: document.getElementById('tProduct').value,
+        quote: document.getElementById('tQuote').value,
+        rating: document.getElementById('tRating').value,
+        email: document.getElementById('tEmail').value,
+        date: new Date().toISOString()
+    };
+
+    // Save to localStorage
+    const existing = JSON.parse(localStorage.getItem('bc_testimonials') || '[]');
+    existing.push(testimonial);
+    localStorage.setItem('bc_testimonials', JSON.stringify(existing));
+
+    // Show success
+    document.getElementById('testimonialForm').style.display = 'none';
+    document.getElementById('submitSuccess').style.display = 'block';
+
+    console.log('Testimonial submitted:', testimonial);
+});
+</script>
+</body>
+</html>
