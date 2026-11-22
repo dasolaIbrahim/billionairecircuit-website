@@ -1,0 +1,49 @@
+{
+ "name": "ARENA",
+ "kind": "symbol",
+ "title": "Centre Light",
+ "idea": "The centre circle seen from the floodlight gantry: two halves split by the halfway line, gathered around the spot where every game starts, and the spot is lit.",
+ "grid": 48,
+ "mark": [
+  {
+   "shape": "ring",
+   "cx": 24,
+   "cy": 24,
+   "r": 21.5,
+   "width": 10
+  },
+  {
+   "shape": "rect",
+   "x": 22,
+   "y": 0,
+   "w": 4,
+   "h": 48,
+   "op": "cut"
+  }
+ ],
+ "accent": [
+  {
+   "shape": "circle",
+   "cx": 24,
+   "cy": 24,
+   "r": 5
+  }
+ ],
+ "wordmark": {
+  "text": "ARENA",
+  "font": "Sora",
+  "weight": 600,
+  "tracking": 30
+ },
+ "lockup": {
+  "mark_scale": 1.6,
+  "gap": 0.6
+ },
+ "palette": {
+  "ink": "#0B1020",
+  "paper": "#EEF1F5",
+  "accent": "#58C7FF",
+  "neutral": "#7D8698",
+  "tint": "#DCE6F0"
+ }
+}

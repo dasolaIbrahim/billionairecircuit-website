@@ -1,0 +1,56 @@
+{
+ "direction": "Match Day",
+ "checks": [
+  {
+   "check": "stroke at 16 px",
+   "value": "3.06 px",
+   "pass_at": ">= 1.5 px",
+   "ok": true
+  },
+  {
+   "check": "counters at 16 px",
+   "value": "1 of 1",
+   "pass_at": "same as at 512 px",
+   "ok": true
+  },
+  {
+   "check": "ink on paper",
+   "value": "15.44:1",
+   "pass_at": ">= 4.5:1",
+   "ok": true
+  },
+  {
+   "check": "accent against paper or ink",
+   "value": "6.02:1",
+   "pass_at": ">= 3:1",
+   "ok": true
+  },
+  {
+   "check": "nearest reference",
+   "value": "0.756",
+   "pass_at": "< 0.791",
+   "ok": true
+  }
+ ],
+ "nearest": [
+  {
+   "score": 0.7563,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/arena/logotype-logomark/12883564.jpg"
+  },
+  {
+   "score": 0.348,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/pinterest/logo/rel_917678861593236106_2.jpg"
+  },
+  {
+   "score": 0.2743,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/arena/marks-monograms-symbols/40416719.jpg"
+  }
+ ],
+ "ink_share_by_size": {
+  "16": 0.685,
+  "32": 0.6829,
+  "64": 0.6893,
+  "512": 0.6878
+ },
+ "ok": true
+}

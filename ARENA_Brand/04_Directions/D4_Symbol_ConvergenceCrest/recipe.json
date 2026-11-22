@@ -1,0 +1,110 @@
+{
+ "name": "ARENA",
+ "kind": "symbol",
+ "title": "Convergence Crest",
+ "idea": "A tournament bracket (four entrants, two semis, one final) carved into a shield: everyone meets here, the path resolves to one winner, and the venue is verified.",
+ "grid": 48,
+ "mark": [
+  {
+   "shape": "path",
+   "d": "M5.0 5 L43.0 5 L43.0 21 C43.0 35 32 40.5 24 46.5 C16 40.5 5.0 35 5.0 21 Z"
+  },
+  {
+   "shape": "rect",
+   "x": 7.25,
+   "y": 9.5,
+   "w": 3.5,
+   "h": 8,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 17.25,
+   "y": 9.5,
+   "w": 3.5,
+   "h": 8,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 7.25,
+   "y": 16.5,
+   "w": 13.5,
+   "h": 3.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 12.25,
+   "y": 16.5,
+   "w": 3.5,
+   "h": 10.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 37.25,
+   "y": 9.5,
+   "w": 3.5,
+   "h": 8,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 27.25,
+   "y": 9.5,
+   "w": 3.5,
+   "h": 8,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 27.25,
+   "y": 16.5,
+   "w": 13.5,
+   "h": 3.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 32.25,
+   "y": 16.5,
+   "w": 3.5,
+   "h": 10.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 12.25,
+   "y": 23.5,
+   "w": 23.5,
+   "h": 3.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 22.25,
+   "y": 23.5,
+   "w": 3.5,
+   "h": 17.5,
+   "op": "cut"
+  }
+ ],
+ "wordmark": {
+  "text": "ARENA",
+  "font": "Archivo",
+  "weight": 800,
+  "tracking": 40
+ },
+ "lockup": {
+  "mark_scale": 1.7,
+  "gap": 0.6
+ },
+ "palette": {
+  "ink": "#0F2340",
+  "paper": "#F2EEE5",
+  "accent": "#C9A24A",
+  "neutral": "#8691A3",
+  "tint": "#E3E6EC"
+ }
+}

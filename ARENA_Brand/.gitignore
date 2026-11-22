@@ -1,0 +1,6 @@
+# Third-party reference images: measured/studied locally, never redistributed (make-logo rule; public repo)
+01_Research/references/
+01_Research/moodboards/*.png
+01_Research/moodboards/references_manifest.json
+03_Sketches/_tiles/
+__pycache__/

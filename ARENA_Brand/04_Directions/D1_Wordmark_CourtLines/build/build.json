@@ -1,0 +1,33 @@
+{
+ "name": "ARENA",
+ "grid": 48,
+ "mark_box": [
+  8.0,
+  3.5,
+  40.0,
+  43.5
+ ],
+ "guides": {
+  "x": [],
+  "y": []
+ },
+ "kind": "wordmark",
+ "wordmark": {
+  "text": "ARENA",
+  "font": "custom-constructed",
+  "weight": 0,
+  "cap": 100,
+  "licence": "original drawing (no font outlines)",
+  "reserved_names": []
+ },
+ "fonts": {},
+ "title": "Court Lines",
+ "idea": "ARENA drawn with the court's own geometry: the A is the trapezoid key, its crossbar the free-throw line; the E's middle arm floats free like a painted lane line.",
+ "palette": {
+  "ink": "#0E0E12",
+  "paper": "#F3EEE4",
+  "accent": "#C8553D",
+  "neutral": "#8C8579",
+  "tint": "#E6DFD2"
+ }
+}

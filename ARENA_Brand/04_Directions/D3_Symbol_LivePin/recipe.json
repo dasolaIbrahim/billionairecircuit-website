@@ -1,0 +1,78 @@
+{
+ "name": "ARENA",
+ "kind": "symbol",
+ "title": "Live Pin",
+ "idea": "A map pin whose head is a stadium seen from above (the racetrack shape geometry literally calls a 'stadium'), with a live light switched on at its shoulder: there's a game near you, and it's on now.",
+ "grid": 48,
+ "mark": [
+  {
+   "shape": "circle",
+   "cx": 24,
+   "cy": 20,
+   "r": 17,
+   "op": "add"
+  },
+  {
+   "shape": "polygon",
+   "points": [
+    [
+     10.959,
+     30.906
+    ],
+    [
+     37.041,
+     30.906
+    ],
+    [
+     24,
+     46.5
+    ]
+   ],
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 11.0,
+   "y": 11.5,
+   "w": 26,
+   "h": 17,
+   "r": 8.5,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 15.5,
+   "y": 16.0,
+   "w": 17,
+   "h": 8,
+   "r": 4.0,
+   "op": "add"
+  }
+ ],
+ "accent": [
+  {
+   "shape": "circle",
+   "cx": 38.5,
+   "cy": 7.5,
+   "r": 4.25
+  }
+ ],
+ "accent_halo": 2.25,
+ "wordmark": {
+  "text": "ARENA",
+  "font": "Bricolage Grotesque",
+  "weight": 700,
+  "tracking": 10
+ },
+ "lockup": {
+  "mark_scale": 1.75,
+  "gap": 0.55
+ },
+ "palette": {
+  "ink": "#0F3B2B",
+  "paper": "#F3F1EA",
+  "accent": "#22E27A",
+  "neutral": "#6F8A7E",
+  "tint": "#DCE8E1"
+ }
+}

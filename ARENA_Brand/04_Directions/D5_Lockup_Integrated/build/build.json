@@ -1,0 +1,33 @@
+{
+ "name": "ARENA",
+ "grid": 48,
+ "mark_box": [
+  8.0,
+  3.5,
+  40.0,
+  43.5
+ ],
+ "guides": {
+  "x": [],
+  "y": []
+ },
+ "kind": "integrated",
+ "wordmark": {
+  "text": "ARENA",
+  "font": "custom-constructed",
+  "weight": 0,
+  "cap": 100,
+  "licence": "original drawing (no font outlines)",
+  "reserved_names": []
+ },
+ "fonts": {},
+ "title": "Pin in the A",
+ "idea": "The first A's counter is a map pin standing on the A's crossbar (find); the last A's counter holds the live light (play). Find it, then it's on: one word, the whole product.",
+ "palette": {
+  "ink": "#0E0E12",
+  "paper": "#F3EEE4",
+  "accent": "#4B2BFF",
+  "neutral": "#8A86A0",
+  "tint": "#E4E0F7"
+ }
+}

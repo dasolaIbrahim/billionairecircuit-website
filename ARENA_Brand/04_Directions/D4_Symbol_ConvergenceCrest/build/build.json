@@ -1,0 +1,58 @@
+{
+ "name": "ARENA",
+ "grid": 48,
+ "mark_box": [
+  5.0,
+  5.0,
+  43.0,
+  46.5
+ ],
+ "guides": {
+  "x": [
+   7.25,
+   10.75,
+   12.25,
+   15.75,
+   17.25,
+   20.75,
+   22.25,
+   25.75,
+   27.25,
+   30.75,
+   32.25,
+   35.75,
+   37.25,
+   40.75
+  ],
+  "y": [
+   9.5,
+   16.5,
+   17.5,
+   20.0,
+   23.5,
+   27.0,
+   41.0
+  ]
+ },
+ "kind": "symbol",
+ "wordmark": {
+  "text": "ARENA",
+  "font": "Archivo",
+  "weight": 800,
+  "cap": 686,
+  "licence": "/root/.cache/make-logo/fonts/archivo/OFL.txt",
+  "reserved_names": []
+ },
+ "fonts": {
+  "Archivo": "/root/.cache/make-logo/fonts/archivo/OFL.txt"
+ },
+ "title": "Convergence Crest",
+ "idea": "A tournament bracket (four entrants, two semis, one final) carved into a shield: everyone meets here, the path resolves to one winner, and the venue is verified.",
+ "palette": {
+  "ink": "#0F2340",
+  "paper": "#F2EEE5",
+  "accent": "#C9A24A",
+  "neutral": "#8691A3",
+  "tint": "#E3E6EC"
+ }
+}

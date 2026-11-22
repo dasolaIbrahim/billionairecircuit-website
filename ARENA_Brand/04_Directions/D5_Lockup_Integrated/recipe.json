@@ -1,0 +1,327 @@
+{
+ "name": "ARENA",
+ "kind": "integrated",
+ "title": "Pin in the A",
+ "idea": "The first A's counter is a map pin standing on the A's crossbar (find); the last A's counter holds the live light (play). Find it, then it's on: one word, the whole product.",
+ "grid": 48,
+ "mark": [
+  {
+   "shape": "group",
+   "items": [
+    {
+     "shape": "rect",
+     "x": 8.0,
+     "y": 19.5,
+     "w": 32.0,
+     "h": 24.0,
+     "op": "add"
+    },
+    {
+     "shape": "circle",
+     "cx": 24.0,
+     "cy": 19.5,
+     "r": 16.0
+    },
+    {
+     "shape": "group",
+     "op": "cut",
+     "items": [
+      {
+       "shape": "circle",
+       "cx": 24.0,
+       "cy": 20.3,
+       "r": 7.6000000000000005,
+       "op": "add"
+      },
+      {
+       "shape": "polygon",
+       "points": [
+        [
+         17.786,
+         24.675600000000003
+        ],
+        [
+         30.214,
+         24.675600000000003
+        ],
+        [
+         24.0,
+         33.5
+        ]
+       ],
+       "op": "add"
+      }
+     ]
+    },
+    {
+     "shape": "rect",
+     "x": 16.4,
+     "y": 37.1,
+     "w": 15.200000000000001,
+     "h": 8.0,
+     "op": "cut"
+    }
+   ]
+  }
+ ],
+ "wordmark_shapes": {
+  "grid": 100,
+  "cap": 100,
+  "shapes": [
+   {
+    "shape": "group",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 0,
+      "y": 40.0,
+      "w": 80,
+      "h": 60.0,
+      "op": "add"
+     },
+     {
+      "shape": "circle",
+      "cx": 40.0,
+      "cy": 40.0,
+      "r": 40.0
+     },
+     {
+      "shape": "group",
+      "op": "cut",
+      "items": [
+       {
+        "shape": "circle",
+        "cx": 40.0,
+        "cy": 42.0,
+        "r": 19.0,
+        "op": "add"
+       },
+       {
+        "shape": "polygon",
+        "points": [
+         [
+          24.465,
+          52.939
+         ],
+         [
+          55.535,
+          52.939
+         ],
+         [
+          40.0,
+          75
+         ]
+        ],
+        "op": "add"
+       }
+      ]
+     },
+     {
+      "shape": "rect",
+      "x": 21.0,
+      "y": 84,
+      "w": 38.0,
+      "h": 20,
+      "op": "cut"
+     }
+    ]
+   },
+   {
+    "shape": "group",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 86,
+      "y": 0,
+      "w": 21.0,
+      "h": 100,
+      "op": "add"
+     },
+     {
+      "shape": "rect",
+      "x": 86,
+      "y": 0,
+      "w": 38,
+      "h": 62,
+      "op": "add"
+     },
+     {
+      "shape": "circle",
+      "cx": 124,
+      "cy": 31,
+      "r": 31
+     },
+     {
+      "shape": "circle",
+      "cx": 124,
+      "cy": 31,
+      "r": 10.0,
+      "op": "cut"
+     },
+     {
+      "shape": "rect",
+      "x": 107.0,
+      "y": 21.0,
+      "w": 17,
+      "h": 20.0,
+      "op": "cut"
+     },
+     {
+      "shape": "polygon",
+      "points": [
+       [
+        116,
+        56
+       ],
+       [
+        138,
+        56
+       ],
+       [
+        156,
+        100
+       ],
+       [
+        133,
+        100
+       ]
+      ],
+      "op": "add"
+     }
+    ]
+   },
+   {
+    "shape": "group",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 165,
+      "y": 0,
+      "w": 21.0,
+      "h": 100,
+      "op": "add"
+     },
+     {
+      "shape": "rect",
+      "x": 165,
+      "y": 0,
+      "w": 54,
+      "h": 19,
+      "op": "add"
+     },
+     {
+      "shape": "rect",
+      "x": 165,
+      "y": 40.5,
+      "w": 48,
+      "h": 19,
+      "op": "add"
+     },
+     {
+      "shape": "rect",
+      "x": 165,
+      "y": 81,
+      "w": 54,
+      "h": 19,
+      "op": "add"
+     }
+    ]
+   },
+   {
+    "shape": "group",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 231,
+      "y": 0,
+      "w": 21.0,
+      "h": 100,
+      "op": "add"
+     },
+     {
+      "shape": "rect",
+      "x": 286.0,
+      "y": 0,
+      "w": 21.0,
+      "h": 100,
+      "op": "add"
+     },
+     {
+      "shape": "polygon",
+      "points": [
+       [
+        231,
+        0
+       ],
+       [
+        256.0,
+        0
+       ],
+       [
+        307,
+        100
+       ],
+       [
+        282.0,
+        100
+       ]
+      ],
+      "op": "add"
+     }
+    ]
+   },
+   {
+    "shape": "group",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 313,
+      "y": 40.0,
+      "w": 80,
+      "h": 60.0,
+      "op": "add"
+     },
+     {
+      "shape": "circle",
+      "cx": 353.0,
+      "cy": 40.0,
+      "r": 40.0
+     },
+     {
+      "shape": "circle",
+      "cx": 353.0,
+      "cy": 42.0,
+      "r": 19.0,
+      "op": "cut"
+     },
+     {
+      "shape": "rect",
+      "x": 334.0,
+      "y": 84,
+      "w": 38.0,
+      "h": 20,
+      "op": "cut"
+     }
+    ]
+   }
+  ],
+  "accent": [
+   {
+    "shape": "circle",
+    "cx": 353,
+    "cy": 42,
+    "r": 8
+   }
+  ]
+ },
+ "lockup": {
+  "mode": "integrated"
+ },
+ "palette": {
+  "ink": "#0E0E12",
+  "paper": "#F3EEE4",
+  "accent": "#4B2BFF",
+  "neutral": "#8A86A0",
+  "tint": "#E4E0F7"
+ }
+}

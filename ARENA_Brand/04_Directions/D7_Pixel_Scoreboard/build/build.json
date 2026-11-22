@@ -1,0 +1,69 @@
+{
+ "name": "ARENA",
+ "grid": 48,
+ "mark_box": [
+  2.75,
+  0.0,
+  44.0,
+  46.75
+ ],
+ "guides": {
+  "x": [
+   2.75,
+   5.5,
+   8.25,
+   11.0,
+   13.75,
+   16.5,
+   19.25,
+   24.75,
+   27.5,
+   30.25,
+   33.0,
+   35.75,
+   38.5,
+   41.25
+  ],
+  "y": [
+   2.75,
+   5.5,
+   8.25,
+   11.0,
+   13.75,
+   16.5,
+   19.25,
+   22.0,
+   24.75,
+   27.5,
+   30.25,
+   33.0,
+   35.75,
+   38.5,
+   41.25,
+   44.0,
+   46.75
+  ]
+ },
+ "kind": "symbol",
+ "wordmark": {
+  "text": "arena",
+  "font": "Familjen Grotesk",
+  "weight": 700,
+  "cap": 780,
+  "licence": "/root/.cache/make-logo/fonts/familjengrotesk/OFL.txt",
+  "reserved_names": []
+ },
+ "fonts": {
+  "Familjen Grotesk": "/root/.cache/make-logo/fonts/familjengrotesk/OFL.txt"
+ },
+ "title": "Pixel Scoreboard",
+ "idea": "The GhostRevenue pixel system cloned for ARENA: a square-pixel pin mascot lit like a stadium LED scoreboard, with six poses that are the app's own statuses (available, live, booked, closed, fully booked, ask).",
+ "palette": {
+  "ink": "#0B0D0E",
+  "paper": "#F2F5EE",
+  "accent": "#B8FF2C",
+  "neutral": "#1B1F21",
+  "tint": "#E4E9DC",
+  "signal": "#FF5A4F"
+ }
+}

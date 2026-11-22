@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1060" width="1000" height="1060" font-family="Inter, Helvetica, Arial, sans-serif">
+<title>ARENA category positioning grid</title>
+<rect width="1000" height="1060" fill="#FBFAF7"/>
+<text x="40" y="48" font-size="26" font-weight="800" fill="#111">ARENA — Category positioning grid</text>
+<text x="40" y="74" font-size="14" fill="#555">Brands plotted by brand expression (not product scope). Approximate, strategist judgement, Nov 2026.</text>
+<rect x="629.2" y="429.8" width="235.5999999999999" height="186.2" rx="18" fill="#111" fill-opacity="0.05" stroke="#111" stroke-dasharray="6 6" stroke-width="1.5"/>
+<text x="641.2" y="572.0" font-size="13" font-weight="700" fill="#111">WHITE SPACE</text>
+<text x="641.2" y="589.0" font-size="12" fill="#333">community-first booking with</text>
+<text x="641.2" y="605.0" font-size="12" fill="#333">street credibility + pro craft</text>
+<rect x="120" y="160" width="760" height="760" fill="none" stroke="#CFCBC2" stroke-width="1"/>
+<line x1="120" y1="540" x2="880" y2="540" stroke="#9A958A" stroke-width="1.5"/>
+<line x1="500" y1="160" x2="500" y2="920" stroke="#9A958A" stroke-width="1.5"/>
+<text x="500" y="148" font-size="15" font-weight="700" text-anchor="middle" fill="#111">PREMIUM / PRO</text>
+<text x="500" y="944" font-size="15" font-weight="700" text-anchor="middle" fill="#111">GRASSROOTS / STREET</text>
+<text transform="translate(104,540) rotate(-90)" font-size="15" font-weight="700" text-anchor="middle" fill="#111">UTILITY / TOOL</text>
+<text transform="translate(896,540) rotate(90)" font-size="15" font-weight="700" text-anchor="middle" fill="#111">COMMUNITY / CULTURE</text>
+<circle cx="188.4" cy="456.4" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="198.4" y="460.4" font-size="12" fill="#222">CourtReserve</text>
+<circle cx="226.4" cy="403.2" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="236.4" y="407.2" font-size="12" fill="#222">ClubSpark</text>
+<circle cx="173.2" cy="357.6" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="183.2" y="361.6" font-size="12" fill="#222">MatchPoint</text>
+<circle cx="180.8" cy="578.0" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="190.8" y="582.0" font-size="12" fill="#222">Bookteq</text>
+<circle cx="249.2" cy="524.8" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="259.2" y="528.8" font-size="12" fill="#222">SportsBooker</text>
+<circle cx="287.2" cy="441.2" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="297.2" y="445.2" font-size="12" fill="#222">Fitogram</text>
+<circle cx="294.8" cy="589.4" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="304.8" y="593.4" font-size="12" fill="#222">Playfinder</text>
+<circle cx="363.2" cy="676.8" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="373.2" y="680.8" font-size="12" fill="#222">Hudle</text>
+<circle cx="522.8" cy="699.6" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="532.8" y="703.6" font-size="12" fill="#222">Playo</text>
+<circle cx="591.2" cy="350.0" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="601.2" y="354.0" font-size="12" fill="#222">Playtomic</text>
+<circle cx="424.0" cy="752.8" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="434.0" y="756.8" font-size="12" fill="#222">Spond</text>
+<circle cx="393.6" cy="631.2" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="403.6" y="635.2" font-size="12" fill="#222">TeamSnap</text>
+<circle cx="256.8" cy="486.8" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="266.8" y="490.8" font-size="12" fill="#222">Sportlomo</text>
+<circle cx="697.6" cy="783.2" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="707.6" y="787.2" font-size="12" fill="#222">Footy Addicts</text>
+<circle cx="629.2" cy="730.0" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="639.2" y="734.0" font-size="12" fill="#222">Plei</text>
+<circle cx="560.8" cy="783.2" r="6" fill="#2F6BFF" stroke="#fff" stroke-width="1.5"/>
+<text x="550.8" y="787.2" font-size="12" fill="#222" text-anchor="end">Leagues Arena (NG)</text>
+<circle cx="294.8" cy="775.6" r="6" fill="#8A3FFC" stroke="#fff" stroke-width="1.5"/>
+<text x="304.8" y="779.6" font-size="12" fill="#222">Challonge</text>
+<circle cx="469.6" cy="646.4" r="6" fill="#8A3FFC" stroke="#fff" stroke-width="1.5"/>
+<text x="459.6" y="650.4" font-size="12" fill="#222" text-anchor="end">Battlefy</text>
+<circle cx="606.4" cy="623.6" r="6" fill="#8A3FFC" stroke="#fff" stroke-width="1.5"/>
+<text x="616.4" y="627.6" font-size="12" fill="#222">start.gg</text>
+<circle cx="332.8" cy="509.6" r="6" fill="#8A3FFC" stroke="#fff" stroke-width="1.5"/>
+<text x="322.8" y="513.6" font-size="12" fill="#222" text-anchor="end">Toornament</text>
+<circle cx="804.0" cy="410.8" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="794.0" y="414.8" font-size="12" fill="#222" text-anchor="end">Strava</text>
+<circle cx="408.8" cy="266.4" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="418.8" y="270.4" font-size="12" fill="#222">Hudl</text>
+<circle cx="507.6" cy="304.4" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="517.6" y="308.4" font-size="12" fill="#222">Veo</text>
+<circle cx="728.0" cy="365.2" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="738.0" y="369.2" font-size="12" fill="#222">OneFootball</text>
+<circle cx="386.0" cy="372.8" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="396.0" y="376.8" font-size="12" fill="#222">FotMob</text>
+<circle cx="325.2" cy="327.2" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="335.2" y="331.2" font-size="12" fill="#222">Sofascore</text>
+<circle cx="431.6" cy="524.8" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="441.6" y="528.8" font-size="12" fill="#222">LiveScore</text>
+<circle cx="652.0" cy="403.2" r="6" fill="#E8590C" stroke="#fff" stroke-width="1.5"/>
+<text x="642.0" y="407.2" font-size="12" fill="#222" text-anchor="end">theScore</text>
+<circle cx="530.4" cy="570.4" r="6" fill="#0F9D8A" stroke="#fff" stroke-width="1.5"/>
+<text x="540.4" y="574.4" font-size="12" fill="#222">Powerleague</text>
+<circle cx="492.4" cy="593.2" r="6" fill="#0F9D8A" stroke="#fff" stroke-width="1.5"/>
+<text x="482.4" y="597.2" font-size="12" fill="#222" text-anchor="end">Goals</text>
+<circle cx="758.4" cy="236.0" r="6" fill="#0F9D8A" stroke="#fff" stroke-width="1.5"/>
+<text x="748.4" y="240.0" font-size="12" fill="#222" text-anchor="end">NBA Africa / BAL</text>
+<circle cx="750.8" cy="828.8" r="6" fill="#0F9D8A" stroke="#fff" stroke-width="1.5"/>
+<text x="740.8" y="832.8" font-size="12" fill="#222" text-anchor="end">Lagos street 5s (Spires, Betway 5s)</text>
+<circle cx="826.8" cy="699.6" r="6" fill="#0F9D8A" stroke="#fff" stroke-width="1.5"/>
+<text x="816.8" y="703.6" font-size="12" fill="#222" text-anchor="end">Pigalle / Hackney courts</text>
+<circle cx="386.0" cy="547.6" r="6" fill="#D6336C" stroke="#fff" stroke-width="1.5"/>
+<text x="376.0" y="551.6" font-size="12" fill="#222" text-anchor="end">Eventbrite</text>
+<circle cx="720.4" cy="274.0" r="6" fill="#D6336C" stroke="#fff" stroke-width="1.5"/>
+<text x="710.4" y="278.0" font-size="12" fill="#222" text-anchor="end">Fever</text>
+<circle cx="591.2" cy="509.6" r="6" fill="#D6336C" stroke="#fff" stroke-width="1.5"/>
+<text x="581.2" y="513.6" font-size="12" fill="#222" text-anchor="end">Tix Africa</text>
+<circle cx="690.0" cy="654.0" r="6" fill="#6B7280" stroke="#fff" stroke-width="1.5"/>
+<text x="700.0" y="658.0" font-size="12" fill="#222">DAC Sports (est.)</text>
+<circle cx="728.0" cy="505.8" r="17" fill="none" stroke="#111" stroke-width="2"/>
+<circle cx="728.0" cy="505.8" r="9" fill="#111"/>
+<text x="752.0" y="510.8" font-size="16" font-weight="800" fill="#111">ARENA (target)</text>
+<circle cx="126" cy="976" r="6" fill="#2F6BFF"/>
+<text x="138" y="980" font-size="12" fill="#333">Booking / team mgmt</text>
+<circle cx="386" cy="976" r="6" fill="#8A3FFC"/>
+<text x="398" y="980" font-size="12" fill="#333">Tournaments / brackets</text>
+<circle cx="646" cy="976" r="6" fill="#E8590C"/>
+<text x="658" y="980" font-size="12" fill="#333">Sports media / tech</text>
+<circle cx="126" cy="1000" r="6" fill="#0F9D8A"/>
+<text x="138" y="1004" font-size="12" fill="#333">Venues / leagues / courts</text>
+<circle cx="386" cy="1000" r="6" fill="#D6336C"/>
+<text x="398" y="1004" font-size="12" fill="#333">Ticketing / discovery</text>
+<circle cx="646" cy="1000" r="6" fill="#6B7280"/>
+<text x="658" y="1004" font-size="12" fill="#333">Parent (DAC Sports)</text>
+</svg>

@@ -1,0 +1,56 @@
+{
+ "direction": "Live Pin",
+ "checks": [
+  {
+   "check": "stroke at 16 px",
+   "value": "2.06 px",
+   "pass_at": ">= 1.5 px",
+   "ok": true
+  },
+  {
+   "check": "counters at 16 px",
+   "value": "1 of 1",
+   "pass_at": "same as at 512 px",
+   "ok": true
+  },
+  {
+   "check": "ink on paper",
+   "value": "11.06:1",
+   "pass_at": ">= 4.5:1",
+   "ok": true
+  },
+  {
+   "check": "accent against paper or ink",
+   "value": "7.27:1",
+   "pass_at": ">= 3:1",
+   "ok": true
+  },
+  {
+   "check": "nearest reference",
+   "value": "0.365",
+   "pass_at": "< 0.791",
+   "ok": true
+  }
+ ],
+ "nearest": [
+  {
+   "score": 0.3653,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/pinterest/logo/rel_917678861593236106_2.jpg"
+  },
+  {
+   "score": 0.1196,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/pinterest/logo/rel_527273068896946722_2.jpg"
+  },
+  {
+   "score": 0.108,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/arena/marks-monograms-symbols/40416719.jpg"
+  }
+ ],
+ "ink_share_by_size": {
+  "16": 0.4453,
+  "32": 0.4409,
+  "64": 0.4427,
+  "512": 0.4432
+ },
+ "ok": true
+}
