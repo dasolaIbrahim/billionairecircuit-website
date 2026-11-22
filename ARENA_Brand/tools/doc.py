@@ -21,8 +21,10 @@ FINAL = os.path.join(BR, "05_Logo_Book", "Arena Brand Identity Design.pdf")
 ML = os.path.join(BR, "..", ".claude", "skills", "make-logo", "scripts")
 os.makedirs(OUT, exist_ok=True)
 shutil.copy(os.path.join(BOOK, "fonts", "book.ttf"), os.path.join(OUT, "book.ttf"))
+UNB = os.path.expanduser("~/.cache/make-logo/fonts/unbounded/Unbounded[wght].ttf")
+shutil.copy(UNB, os.path.join(OUT, "display.ttf"))
 
-DARK, MINT, DEEP, PAPER, INK, MUTED = "#0C0D0D", "#A6F0C6", "#0F6B45", "#F3F1EC", "#141515", "#6C6A64"
+DARK, MINT, DEEP, PAPER, INK, MUTED = "#0C0D0D", "#B8FF2C", "#141515", "#F3F1EC", "#141515", "#6C6A64"  # DEEP: light-page display = black (user)
 LOGO = "data:image/svg+xml;base64," + base64.b64encode(
     open(os.path.join(BR, "00_Process", "assets", "prodoktiv-logo-orange.svg"), "rb").read()).decode()
 
@@ -53,15 +55,16 @@ def idea(d):
 
 CSS = f"""
 @font-face {{ font-family: "Book"; src: url("book.ttf"); font-weight: 100 900; }}
+@font-face {{ font-family: "Display"; src: url("display.ttf"); font-weight: 200 900; }}
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
 @page {{ size: 1600px 900px; margin: 0; }}
 body {{ font-family: "Book"; color: {INK}; -webkit-font-smoothing: antialiased; }}
 .pg {{ width: 1600px; height: 900px; position: relative; overflow: hidden; break-after: page; background: {PAPER}; }}
 .dark {{ background: {DARK}; color: #E9E9E4; }}
-.mega {{ font-weight: 600; letter-spacing: -0.058em; line-height: .78; color: {MINT}; }}
+.mega {{ font-family: "Display"; font-weight: 600; letter-spacing: -0.035em; line-height: .92; color: {MINT}; }}
 .kicker {{ font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: #8E8E88; }}
-.h {{ position: absolute; left: 64px; top: 52px; font-size: 104px; font-weight: 600; letter-spacing: -0.048em; line-height: .9; color: {DEEP}; }}
-.sub {{ position: absolute; left: 68px; top: 168px; font-size: 18px; color: {MUTED}; }}
+.h {{ position: absolute; left: 64px; top: 58px; font-family: "Display"; font-size: 64px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: {DEEP}; }}
+.sub {{ position: absolute; left: 68px; top: 150px; font-size: 18px; color: {MUTED}; }}
 .credit {{ display: flex; align-items: center; gap: 12px; font-size: 14px; color: #9A9A94; }}
 .credit img {{ height: 15px; }}
 p {{ font-size: 19px; line-height: 1.5; }}
@@ -73,7 +76,7 @@ def front():
       <div class="kicker" style="position:absolute;left:64px;top:60px">Brand Identity Design</div>
       <div class="kicker" style="position:absolute;right:64px;top:60px">November 2026</div>
       <p style="position:absolute;right:64px;top:250px;width:430px;color:#B8B8B2;font-size:20px">{esc(DETAIL)}</p>
-      <div class="mega" style="position:absolute;left:46px;bottom:150px;font-size:410px">ARENA</div>
+      <div class="mega" style="position:absolute;left:58px;bottom:150px;font-size:230px">ARENA</div>
       <div class="credit" style="position:absolute;left:64px;bottom:58px">Designed by <img src="{LOGO}"></div>
       <div class="kicker" style="position:absolute;right:64px;bottom:60px">Seven logo directions</div></section>"""
 
@@ -83,13 +86,13 @@ def thanks():
       <div class="kicker" style="position:absolute;left:64px;top:60px">Brand Identity Design</div>
       <div class="kicker" style="position:absolute;right:64px;top:60px">ARENA</div>
       <p style="position:absolute;right:64px;top:250px;width:430px;color:#B8B8B2;font-size:20px">Seven directions, one brand. Tell us which one moves you, or which two you'd like to see together, and we'll take it from here.</p>
-      <div class="mega" style="position:absolute;left:52px;bottom:140px;font-size:220px;line-height:.86">Thank you<br><span style="color:#5E8F73">for your time.</span></div>
+      <div class="mega" style="position:absolute;left:60px;bottom:150px;font-size:118px;line-height:1">Thank you<br><span style="color:#7D9A4E">for your time.</span></div>
       <div class="credit" style="position:absolute;left:64px;bottom:58px">Designed by <img src="{LOGO}"></div>
       <div class="kicker" style="position:absolute;right:64px;bottom:60px">November 2026</div></section>"""
 
 
 def title(num, name, line=""):
-    size = 230 if len(name) <= 12 else 170
+    size = min(150, int(1440 / (len(name) * 0.8)))  # Unbounded is wide: fit the longest title in one line
     return f"""<section class="pg dark">
       <div class="kicker" style="position:absolute;left:64px;top:60px;color:{MINT}">{esc(num)}</div>
       <div class="mega" style="position:absolute;left:52px;bottom:190px;font-size:{size}px;max-width:1500px">{esc(name)}</div>
@@ -105,7 +108,7 @@ def contents(toc):
                         f'<span style="width:44px;font-size:15px;color:{DEEP};font-weight:600">{esc(num)}</span>'
                         f'<span style="flex:1;font-size:24px;letter-spacing:-.02em">{esc(name)}</span>'
                         f'<span style="font-size:15px;color:{MUTED};font-variant-numeric:tabular-nums">{page:02d}</span></div>')
-    return f"""<section class="pg"><div class="h" style="font-size:150px;top:60px">Contents</div>
+    return f"""<section class="pg"><div class="h" style="font-size:96px;top:60px">Contents</div>
       <p style="position:absolute;left:68px;top:250px;width:420px;color:{MUTED};font-size:18px">Foundations first, then the seven directions, each with its system and its mockups, then all of them side by side.</p>
       <div style="position:absolute;left:640px;right:64px;top:44px">{''.join(rows)}</div></section>"""
 
@@ -115,7 +118,7 @@ def intro():
             ("What's inside", "Seven identity directions: two wordmarks, four symbols and one integrated lockup. Each is drawn on a grid, checked down to favicon size, and comes with its own system: three circle modes, three lockups and six status poses."),
             ("How to choose", "Read each direction as a whole: its idea, its system, then the mockups. Finish on the side-by-side pages. Pick one, or name two you'd like to see combined.")]
     c = "".join(f'<div><div style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:{DEEP};font-weight:600;margin-bottom:14px">{esc(a)}</div><p>{esc(b)}</p></div>' for a, b in cols)
-    return f"""<section class="pg"><div class="h" style="font-size:150px;top:60px">Introduction</div>
+    return f"""<section class="pg"><div class="h" style="font-size:96px;top:60px">Introduction</div>
       <p style="position:absolute;left:68px;top:250px;width:860px;font-size:34px;line-height:1.25;letter-spacing:-.02em">Seven ways to say: there's a game near you, and it's on right now.</p>
       <div style="position:absolute;left:68px;right:64px;top:470px;display:grid;grid-template-columns:repeat(3,1fr);gap:56px">{c}</div></section>"""
 
@@ -153,11 +156,13 @@ def picture(heading, sub, png, top=230, maxh=600):
 
 # ------------------------------------------------------------------------------------------- make-logo pages
 def patch_book():
+    shutil.copy(UNB, os.path.join(BOOK, "fonts", "display.ttf"))
     p = os.path.join(BOOK, "index.html")
     s = open(p).read()
     s = re.sub(r"<tr><td>nearest reference</td>.*?</tr>", "", s)
     over = f"""<style>
-h2 {{ font-size: 104px !important; font-weight: 600 !important; letter-spacing: -0.048em !important; line-height: .9 !important; color: {DEEP} !important; }}
+@font-face {{ font-family: "Display"; src: url("fonts/display.ttf"); font-weight: 200 900; }}
+h2 {{ font-family: "Display" !important; font-size: 64px !important; font-weight: 600 !important; letter-spacing: -0.03em !important; line-height: 1 !important; color: {DEEP} !important; }}
 .label {{ top: 52px !important; }}
 .foot, .num {{ display: none !important; }}
 section.page {{ background: {PAPER}; }}
