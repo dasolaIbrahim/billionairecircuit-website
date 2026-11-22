@@ -2,7 +2,7 @@
  "cover_note": "Seven directions, each built on a grid from circles, rectangles and arcs with boolean operations, checked at 16 px, for contrast, and against 96 measured references. Each comes with its system: three circle modes, three lockups and six status poses. Pick one, or name a hybrid.",
  "system_notes": {
   "D1": "Court Lines. Monoline capitals drawn with the court's own geometry: the trapezoid key A, its crossbar the free-throw line, and the E's middle arm floating free like a painted lane line, lit in clay. Poses use square badges to match its square terminals.",
-  "D2": "Match Day (your direction). Syne ExtraBold lowercase, as in your post: loud, wide and friendly. The last a is reversed to face back into the word, and each a's counter is filled with a location pin carved into the optical centre of the bowl. Accent: pitch green #1F9D63.",
+  "D2": "Match Day (your direction). Syne ExtraBold lowercase, as in your post: loud, wide and friendly. Each a has its counter filled with a location pin carved into the optical centre of the bowl; both a's match. Accent: pitch green #1F9D63.",
   "D3": "Live Pin. A map pin whose head is a stadium seen from above, with the live light at its shoulder. The poses replace the light with the status badge, so status always lives in the same place.",
   "D4": "Convergence Crest. A bracket (four, two, one) carved in a shield: competition and verification in one sign. It scales up to trophy and Verified Arena plaque graphics.",
   "D5": "Pin in the A. The first A's counter is a map pin standing on the crossbar (find); the last A holds the live light (play). The pin A stands alone as the app icon.",
@@ -19,7 +19,7 @@
   "D5 Pin in the A (SAD 11/15): the most ownable; the word itself is the arena.",
   "D6 Centre Light (11/15): the best symbol and the best at small sizes; palette and lockup face are the generic parts.",
   "D1 Court Lines (9/15): tasteful but quieter; its clay sits too close to booked red.",
-  "D2 Match Day (rebuilt after the review to your brief: Syne, reversed a, pin counters, green). Its old block-letter scores no longer apply; it now passes every check (nearest reference 0.670).",
+  "D2 Match Day (rebuilt after the review to your brief: Syne, pin counters, green). Its old block-letter scores no longer apply; it now passes every check (nearest reference 0.641).",
   "D3 Live Pin (7/15): reads clearly, but its pin and green sit in the most crowded part of the category.",
   "D4 Convergence Crest (6/15): the shield can read as a trident or menorah, and its navy and gold are close to a major Nigerian bank's.",
   "D7 Pixel Scoreboard (6/15): playful and systemised, but lime on black is the category's most common look; strongest as an illustration and sticker set."
@@ -30,7 +30,7 @@
   "D6: the halfway-line cut widened from 4 to 6 on the 48 grid, so it survives 16 px.",
   "All poses: the logo no longer turns red or gray; only the badge carries status.",
   "Colour on accent: bone or ink is chosen by contrast, so there is never ink on violet (2.8:1).",
-  "Flags recorded (fix if chosen): D4 trident and menorah reading, and bank navy and gold; D3 and D7 green against betting and flag green; D7 mascot face can read as an alien; D2's reversed a reads as a b or p out of context (so it never stands alone)."
+  "Flags recorded (fix if chosen): D4 trident and menorah reading, and bank navy and gold; D3 and D7 green against betting and flag green; D7 mascot face can read as an alien;."
  ],
  "recommendation": "Take D5 Pin in the A forward, with D6's Centre Light as a secondary symbol for live states and motion. If you want more noise and attitude for social, D2's Syne voice is a strong campaign face. It shouldn't be the logo as well.",
  "recommendation_detail": [

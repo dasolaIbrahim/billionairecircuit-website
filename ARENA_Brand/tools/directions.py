@@ -71,9 +71,9 @@ def centred_glyph(text, font, weight, size, grid=48, mirror=False):
 
 D["D2_Wordmark_MatchDay"] = {
     "name": "ARENA", "kind": "wordmark", "title": "Match Day",
-    "idea": "Poster-weight extended lowercase in Syne ExtraBold: loud like a match-day poster. Each a has its counter filled and a location pin carved into the optical centre of the bowl; the last a is flipped to face back into the word, a deliberate tension, like two teams facing off.",
+    "idea": "Poster-weight extended lowercase in Syne ExtraBold: loud like a match-day poster. Each a has its counter filled and a location pin carved into the optical centre of the bowl; both a's match, so the word reads clean and symmetrical around the pins.",
     "grid": 48, "mark": centred_glyph("a", "Syne", 800, 29), "mark_pin_counter": {"style": "enclosed", "head": 0.32, "lift": 0.18},
-    "wordmark": {"text": "arena", "font": "Syne", "weight": 800, "tracking": -20, "mirror_last": True, "mirror_gap": 40, "pin_counters": {"style": "enclosed", "head": 0.32, "lift": 0.18}},
+    "wordmark": {"text": "arena", "font": "Syne", "weight": 800, "tracking": -20, "pin_counters": {"style": "enclosed", "head": 0.32, "lift": 0.18}},
     "lockup": {"mode": "word"},
     "palette": {"ink": "#15121C", "paper": "#F1EADB", "accent": "#1F9D63", "neutral": "#8E8798", "tint": "#D7EEDF"},
 }
