@@ -1,0 +1,43 @@
+--- /tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/orig/scripts/logo_book.py	1970-01-01 00:00:00.000000000 +0000
++++ /home/user/billionairecircuit-website/.claude/skills/make-logo/scripts/logo_book.py	2026-11-22 11:18:19.294545128 +0000
+@@ -38,10 +38,14 @@
+     return re.search(r'viewBox="([^"]+)"', s).group(1), re.search(r' d="([^"]+)"', s).group(1)
+ 
+ 
+-def logo(path: str, fill: str, height: float | None = None, width: float | None = None, cls: str = "") -> str:
++def logo(path: str, fill: str, height: float | None = None, width: float | None = None, cls: str = "",
++         box: float | None = None) -> str:
+     vb, d = read_svg(path)
+     _, _, w, h = (float(v) for v in vb.split())
+-    if height is not None:
++    if box is not None:  # fit inside a square safe area (icons): wide marks are limited by width, tall ones by height
++        height = box if h >= w else box * h / w
++        width = height * w / h
++    elif height is not None:
+         width = height * w / h
+     elif width is not None:
+         height = width * h / w
+@@ -99,7 +103,7 @@
+ 
+ def browser(name: str, bdir: str, p: dict) -> str:
+     domain = re.sub(r"[^a-z0-9]", "", name.lower()) + ".com"
+-    icon = f'<span class="fav" style="background:{p["accent"]}">{logo(os.path.join(bdir, "mark.svg"), p["ink"] if lum(p["accent"]) > .45 else "#ffffff", height=26)}</span>'
++    icon = f'<span class="fav" style="background:{p["accent"]}">{logo(os.path.join(bdir, "mark.svg"), p["ink"] if lum(p["accent"]) > .45 else "#ffffff", box=25)}</span>'
+     return f"""<div class="browser">
+       <div class="tabs"><i></i><i></i><i></i><div class="tab">{icon}<b>{esc(name)}</b><span class="x">×</span></div></div>
+       <div class="bar"><span class="nav">←</span><span class="nav">→</span><span class="nav">↻</span>
+@@ -112,12 +116,12 @@
+     apps = []
+     for i in range(16):
+         if i == 5:
+-            apps.append(f'<div class="app"><span class="ic" style="background:{p["accent"]}">{logo(os.path.join(bdir, "mark.svg"), on, height=40)}</span><em>{esc(name)}</em></div>')
++            apps.append(f'<div class="app"><span class="ic" style="background:{p["accent"]}">{logo(os.path.join(bdir, "mark.svg"), on, box=37)}</span><em>{esc(name)}</em></div>')
+         else:
+             apps.append(f'<div class="app"><span class="ic" style="background:{mix(p["tint"], p["neutral"], (i % 5) / 8)}"></span><em></em></div>')
+     return f"""<div class="phone" style="background:{mix(p['tint'], '#ffffff', .4)}">
+       <div class="notch"></div><div class="time">9:41</div>
+-      <div class="note"><span class="ic sm" style="background:{p['accent']}">{logo(os.path.join(bdir, 'mark.svg'), on, height=20)}</span>
++      <div class="note"><span class="ic sm" style="background:{p['accent']}">{logo(os.path.join(bdir, 'mark.svg'), on, box=23)}</span>
+         <div><b>{esc(name)}</b><span>{esc(note)}</span></div></div>
+       <div class="apps">{''.join(apps)}</div>
+     </div>"""
