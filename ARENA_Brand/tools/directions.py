@@ -48,7 +48,7 @@ def scale_shapes(shapes, sc, ox, oy):
 D = {}
 
 # D1 ----------------------------------------------------------------------------------------------------------
-w1, _ = T.word([T.d1_A, T.d1_R, partial(T.d1_E, float_bar=None), T.d1_N, T.d1_A], [5, 11, 15, 4])
+w1, _ = T.word([T.d1_A, T.d1_R, partial(T.d1_E, float_bar=None), T.d1_N, T.d1_A], [5, 11, 15, 8])
 eb = [s for s in T.d1_E(5 + 80 + 11 + 68)[0]][-1]  # the floating bar of E, drawn as the accent
 D["D1_Wordmark_CourtLines"] = {
     "name": "ARENA", "kind": "wordmark", "title": "Court Lines",
@@ -62,13 +62,20 @@ D["D1_Wordmark_CourtLines"] = {
 # D2 ----------------------------------------------------------------------------------------------------------
 fa2 = partial(T.d2_A, c=15, w=58)
 w2, _ = T.word([fa2, partial(T.d2_R, c=15), T.d2_E, T.d2_N, fa2], [6, 6, 7, 6])
+def centred_glyph(text, font, weight, size, grid=48, mirror=False):
+    """An OFL glyph outlined and centred on the grid by its ink box (two passes: build, measure, place)."""
+    g = {"shape": "glyph", "text": text, "font": font, "weight": weight, "x": 0, "y": 0, "cap": size}
+    x0, y0, x1, y1 = A.build_shapes([g], grid).bounds
+    return [dict(g, x=(grid - (x1 - x0)) / 2 - x0, y=(grid - (y1 - y0)) / 2 - y0, **({"mirror": "x"} if mirror else {}))]
+
+
 D["D2_Wordmark_MatchDay"] = {
     "name": "ARENA", "kind": "wordmark", "title": "Match Day",
-    "idea": "Condensed jersey-block capitals with chamfered shoulders, cut like stadium signage and shirt numerals; the twin As carry a gabled window, like the tunnel arch players walk out of.",
-    "grid": 48, "mark": letter_mark(fa2),
-    "wordmark_shapes": {"grid": 100, "cap": 100, "shapes": w2},
+    "idea": "Poster-weight extended lowercase in Syne ExtraBold: loud like a match-day poster. Each a has its counter filled and a location pin carved into the optical centre of the bowl; the last a is flipped to face back into the word, a deliberate tension, like two teams facing off.",
+    "grid": 48, "mark": centred_glyph("a", "Syne", 800, 29), "mark_pin_counter": {"style": "enclosed", "head": 0.32, "lift": 0.18},
+    "wordmark": {"text": "arena", "font": "Syne", "weight": 800, "tracking": -20, "mirror_last": True, "mirror_gap": 40, "pin_counters": {"style": "enclosed", "head": 0.32, "lift": 0.18}},
     "lockup": {"mode": "word"},
-    "palette": {"ink": "#15121C", "paper": "#F1EADB", "accent": "#FF4F9A", "neutral": "#8E8798", "tint": "#F6D9E6"},
+    "palette": {"ink": "#15121C", "paper": "#F1EADB", "accent": "#1F9D63", "neutral": "#8E8798", "tint": "#D7EEDF"},
 }
 
 # D3 ----------------------------------------------------------------------------------------------------------
@@ -96,7 +103,7 @@ D["D4_Symbol_ConvergenceCrest"] = {
 
 # D5 ----------------------------------------------------------------------------------------------------------
 pinA = partial(T.d5_A, w=80)
-w5, wid5 = T.word([pinA, T.d5_R, T.d5_E, T.d5_N, partial(T.d5_A, w=80, counter="o")], [6, 9, 12, 6])
+w5, wid5 = T.word([pinA, T.d5_R, T.d5_E, T.d5_N, partial(T.d5_A, w=80, counter="o")], [6, 8, 9, 6])
 x_lastA = wid5 - 80
 D["D5_Lockup_Integrated"] = {
     "name": "ARENA", "kind": "integrated", "title": "Pin in the A",
@@ -114,7 +121,7 @@ D["D6_Symbol_CentreLight"] = {
     "idea": "The centre circle seen from the floodlight gantry: two halves split by the halfway line, gathered around the spot where every game starts, and the spot is lit.",
     "grid": 48,
     "mark": [{"shape": "ring", "cx": 24, "cy": 24, "r": 21.5, "width": 10},
-             {"shape": "rect", "x": 22, "y": 0, "w": 4, "h": 48, "op": "cut"}],
+             {"shape": "rect", "x": 21, "y": 0, "w": 6, "h": 48, "op": "cut"}],
     "accent": [{"shape": "circle", "cx": 24, "cy": 24, "r": 5}],
     "wordmark": {"text": "ARENA", "font": "Sora", "weight": 600, "tracking": 30},
     "lockup": {"mark_scale": 1.6, "gap": 0.6},

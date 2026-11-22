@@ -2,405 +2,36 @@
  "name": "ARENA",
  "kind": "wordmark",
  "title": "Match Day",
- "idea": "Condensed jersey-block capitals with chamfered shoulders, cut like stadium signage and shirt numerals; the twin As carry a gabled window, like the tunnel arch players walk out of.",
+ "idea": "Poster-weight extended lowercase in Syne ExtraBold: loud like a match-day poster. Each a has its counter filled and a location pin carved into the optical centre of the bowl; the last a is flipped to face back into the word, a deliberate tension, like two teams facing off.",
  "grid": 48,
  "mark": [
   {
-   "shape": "group",
-   "items": [
-    {
-     "shape": "polygon",
-     "points": [
-      [
-       12.399999999999999,
-       43.5
-      ],
-      [
-       12.399999999999999,
-       9.5
-      ],
-      [
-       18.4,
-       3.5
-      ],
-      [
-       29.599999999999998,
-       3.5
-      ],
-      [
-       35.6,
-       9.5
-      ],
-      [
-       35.6,
-       43.5
-      ]
-     ],
-     "op": "add"
-    },
-    {
-     "shape": "polygon",
-     "points": [
-      [
-       20.0,
-       14.3
-      ],
-      [
-       22.4,
-       11.9
-      ],
-      [
-       25.6,
-       11.9
-      ],
-      [
-       28.0,
-       14.3
-      ],
-      [
-       28.0,
-       23.5
-      ],
-      [
-       20.0,
-       23.5
-      ]
-     ],
-     "op": "cut"
-    },
-    {
-     "shape": "rect",
-     "x": 20.0,
-     "y": 29.900000000000002,
-     "w": 8.0,
-     "h": 16.0,
-     "op": "cut"
-    }
-   ]
+   "shape": "glyph",
+   "text": "a",
+   "font": "Syne",
+   "weight": 800,
+   "x": 0.5100003480911255,
+   "y": 34.95307695865631,
+   "cap": 29
   }
  ],
- "wordmark_shapes": {
-  "grid": 100,
-  "cap": 100,
-  "shapes": [
-   {
-    "shape": "group",
-    "items": [
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        0,
-        100
-       ],
-       [
-        0,
-        15
-       ],
-       [
-        15,
-        0
-       ],
-       [
-        43,
-        0
-       ],
-       [
-        58,
-        15
-       ],
-       [
-        58,
-        100
-       ]
-      ],
-      "op": "add"
-     },
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        19,
-        27
-       ],
-       [
-        25,
-        21
-       ],
-       [
-        33,
-        21
-       ],
-       [
-        39,
-        27
-       ],
-       [
-        39,
-        50
-       ],
-       [
-        19,
-        50
-       ]
-      ],
-      "op": "cut"
-     },
-     {
-      "shape": "rect",
-      "x": 19,
-      "y": 66,
-      "w": 20,
-      "h": 40,
-      "op": "cut"
-     }
-    ]
-   },
-   {
-    "shape": "group",
-    "items": [
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        64,
-        0
-       ],
-       [
-        101,
-        0
-       ],
-       [
-        116,
-        15
-       ],
-       [
-        116,
-        44
-       ],
-       [
-        109,
-        51
-       ],
-       [
-        116,
-        58
-       ],
-       [
-        116,
-        100
-       ],
-       [
-        97,
-        100
-       ],
-       [
-        97,
-        66
-       ],
-       [
-        83,
-        66
-       ],
-       [
-        83,
-        100
-       ],
-       [
-        64,
-        100
-       ]
-      ],
-      "op": "add"
-     },
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        83,
-        17
-       ],
-       [
-        92,
-        17
-       ],
-       [
-        97,
-        22
-       ],
-       [
-        97,
-        49
-       ],
-       [
-        83,
-        49
-       ]
-      ],
-      "op": "cut"
-     }
-    ]
-   },
-   {
-    "shape": "group",
-    "items": [
-     {
-      "shape": "rect",
-      "x": 122,
-      "y": 0,
-      "w": 42,
-      "h": 100,
-      "op": "add"
-     },
-     {
-      "shape": "rect",
-      "x": 141,
-      "y": 17,
-      "w": 42,
-      "h": 25,
-      "op": "cut"
-     },
-     {
-      "shape": "rect",
-      "x": 141,
-      "y": 58,
-      "w": 42,
-      "h": 25,
-      "op": "cut"
-     },
-     {
-      "shape": "rect",
-      "x": 158,
-      "y": 42,
-      "w": 10,
-      "h": 16,
-      "op": "cut"
-     }
-    ]
-   },
-   {
-    "shape": "group",
-    "items": [
-     {
-      "shape": "rect",
-      "x": 171,
-      "y": 0,
-      "w": 54,
-      "h": 100,
-      "op": "add"
-     },
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        190,
-        0
-       ],
-       [
-        206,
-        0
-       ],
-       [
-        206,
-        58
-       ]
-      ],
-      "op": "cut"
-     },
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        190,
-        42
-       ],
-       [
-        206,
-        100
-       ],
-       [
-        190,
-        100
-       ]
-      ],
-      "op": "cut"
-     }
-    ]
-   },
-   {
-    "shape": "group",
-    "items": [
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        231,
-        100
-       ],
-       [
-        231,
-        15
-       ],
-       [
-        246,
-        0
-       ],
-       [
-        274,
-        0
-       ],
-       [
-        289,
-        15
-       ],
-       [
-        289,
-        100
-       ]
-      ],
-      "op": "add"
-     },
-     {
-      "shape": "polygon",
-      "points": [
-       [
-        250,
-        27
-       ],
-       [
-        256,
-        21
-       ],
-       [
-        264,
-        21
-       ],
-       [
-        270,
-        27
-       ],
-       [
-        270,
-        50
-       ],
-       [
-        250,
-        50
-       ]
-      ],
-      "op": "cut"
-     },
-     {
-      "shape": "rect",
-      "x": 250,
-      "y": 66,
-      "w": 20,
-      "h": 40,
-      "op": "cut"
-     }
-    ]
-   }
-  ]
+ "mark_pin_counter": {
+  "style": "enclosed",
+  "head": 0.32,
+  "lift": 0.18
+ },
+ "wordmark": {
+  "text": "arena",
+  "font": "Syne",
+  "weight": 800,
+  "tracking": -20,
+  "mirror_last": true,
+  "mirror_gap": 40,
+  "pin_counters": {
+   "style": "enclosed",
+   "head": 0.32,
+   "lift": 0.18
+  }
  },
  "lockup": {
   "mode": "word"
@@ -408,8 +39,8 @@
  "palette": {
   "ink": "#15121C",
   "paper": "#F1EADB",
-  "accent": "#FF4F9A",
+  "accent": "#1F9D63",
   "neutral": "#8E8798",
-  "tint": "#F6D9E6"
+  "tint": "#D7EEDF"
  }
 }

@@ -129,7 +129,7 @@ def d5_A(x, w=80, counter="pin"):
     out = [R(x, r, w, 100 - r), {"shape": "circle", "cx": x + r, "cy": r, "r": r}]
     cr = r - S5
     if counter == "pin":
-        out += [{"shape": "group", "op": "cut", "items": pin_shapes(x + r, r + 2, cr, 75)}]
+        out += [{"shape": "group", "op": "cut", "items": pin_shapes(x + r, r, cr - 3, 67)}]
     else:
         out += [{"shape": "circle", "cx": x + r, "cy": r + 2, "r": cr, "op": "cut"}]
     out += [R(x + S5, 84, w - 2 * S5, 20, "cut")]

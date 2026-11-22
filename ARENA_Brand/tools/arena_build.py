@@ -83,6 +83,103 @@ def union(*ps):
     return acc
 
 
+def pin_counters(path, select=None, head=0.46, lift=0.0, style="through", tail=0.5, width=0.5):
+    """style: "through" (pin cut through to the baseline), "tail" (keep the counter, grow a point from its base),
+    "enclosed" (fill, carve a small pin inside the bowl), "side" (counter becomes a teardrop on its side)."""
+    if style != "through":
+        return _pin_styles(path, select, style, head, lift, tail, width)
+    return _pin_through(path, select, head, lift)
+
+
+def _holes(path):
+    conts = list(path.contours)
+    boxes = [c.bounds for c in conts]
+    inside = lambda a, b: a[0] > b[0] and a[1] > b[1] and a[2] < b[2] and a[3] < b[3]
+    return conts, boxes, [(i, j) for i, a in enumerate(boxes) for j, b in enumerate(boxes) if i != j and inside(a, b)]
+
+
+def _pin_styles(path, select, style, head, lift, tail, width):
+    import letters as T
+    conts, boxes, holes = _holes(path)
+    out = pathops.simplify(path)
+    for i, j in holes:
+        if select and not select(boxes[i]):
+            continue
+        hx0, hy0, hx1, hy1 = boxes[i]
+        h, w = hy1 - hy0, hx1 - hx0
+        cx, cy = (hx0 + hx1) / 2, (hy0 + hy1) / 2
+        if style == "tail":
+            # the counter keeps its own curve; a point grows from its base (a pin seen at a low angle)
+            # tangents from the tip to the counter's ellipse (a = w/2, b = h/2): touch at y = b^2/d below centre
+            a, b = w / 2, h / 2
+            d = (hy1 + h * tail) - cy
+            ty = b * b / d
+            tx = a * (1 - (ty / b) ** 2) ** 0.5
+            tri = build_shapes([{"shape": "polygon", "points": [[cx - tx, cy + ty - 0.01], [cx + tx, cy + ty - 0.01], [cx, cy + d]]},
+                                {"shape": "rect", "x": cx - tx, "y": cy, "w": 2 * tx, "h": ty}], 48)
+            out = pathops.op(out, tri, pathops.PathOp.DIFFERENCE)
+        elif style == "enclosed":
+            out = pathops.op(out, conts[i], pathops.PathOp.UNION)  # fill the counter
+            r = head * h
+            pc = cy - lift * h
+            # centre on the bowl (outer edge to the stem side of the counter), not on the counter, which in this
+            # face sits toward the stem: the user found the pin "too far to the end of the letter"
+            ox0, _, ox1, _ = boxes[j]
+            stem_right = (ox1 - hx1) < (hx0 - ox0)
+            cx = (ox0 + hx1) / 2 if stem_right else (hx0 + ox1) / 2
+            out = pathops.op(out, build_shapes(T.pin_shapes(cx, pc, r, pc + r * 2.35), 48), pathops.PathOp.DIFFERENCE)
+        elif style == "side":
+            out = pathops.op(out, conts[i], pathops.PathOp.UNION)
+            r = h * 0.5
+            # teardrop on its side: round end away from the stem, point toward it
+            stem_right = boxes[j][2] - hx1 < hx0 - boxes[j][0]
+            ccx = hx0 + r if stem_right else hx1 - r
+            tipx = hx1 if stem_right else hx0
+            l, rr = T.tangent_pin(0, 0, r, abs(tipx - ccx))
+            pts = [[ccx + (l[1] if stem_right else -l[1]), cy + l[0]], [ccx + (rr[1] if stem_right else -rr[1]), cy + rr[0]], [tipx, cy]]
+            out = pathops.op(out, build_shapes([{"shape": "circle", "cx": ccx, "cy": cy, "r": r}, {"shape": "polygon", "points": pts}], 48), pathops.PathOp.DIFFERENCE)
+    return pathops.simplify(out)
+
+
+def _pin_through(path, select=None, head=0.46, lift=0.0):
+    """Fill a letter's counter and carve a location pin in its place, the pin's point running down through the
+    bowl to the baseline (Illustrator: Pathfinder Unite the counter away, then Minus Front a circle+tangent
+    triangle). `select(hole_bbox) -> bool` picks which counters (holes) to treat; default all."""
+    import letters as T
+    conts = [c for c in path.contours]
+    boxes = [c.bounds for c in conts]
+
+    def inside(a, b):
+        return a[0] > b[0] and a[1] > b[1] and a[2] < b[2] and a[3] < b[3]
+
+    holes = [(i, j) for i, a in enumerate(boxes) for j, b in enumerate(boxes) if i != j and inside(a, b)]
+    keep, pins = pathops.Path(), []
+    drop = set()
+    for i, j in holes:
+        if select and not select(boxes[i]):
+            continue
+        drop.add(i)
+        hx0, hy0, hx1, hy1 = boxes[i]
+        h = hy1 - hy0
+        cx, cy = (hx0 + hx1) / 2, (hy0 + hy1) / 2 - lift * h
+        r = head * h
+        bottom = boxes[j][3] + 2
+        pins.append(build_shapes(T.pin_shapes(cx, cy, r, bottom), 48))
+    # rebuild: every contour except the dropped holes, unioned with nonzero fill -> the counters fill in
+    for i, c in enumerate(conts):
+        if i in drop:
+            continue
+        if any(i == hi for hi, _ in holes if hi not in drop):
+            continue
+        keep = pathops.op(keep, c, pathops.PathOp.UNION)
+    for i, c in enumerate(conts):  # put back the holes we didn't select
+        if i not in drop and any(i == hi for hi, _ in holes):
+            keep = pathops.op(keep, c, pathops.PathOp.DIFFERENCE)
+    for p in pins:
+        keep = pathops.op(keep, p, pathops.PathOp.DIFFERENCE)
+    return pathops.simplify(keep)
+
+
 def svg_multi(layers, box, pad=0.0):
     x0, y0, x1, y1 = box
     w, h = x1 - x0 + 2 * pad, y1 - y0 + 2 * pad
@@ -102,6 +199,8 @@ def build(spec, out):
     if spec.get("accent") and halo:
         hal = build_shapes([dict(c, **({"r": c["r"] + halo} if c["shape"] == "circle" else {})) for c in spec["accent"]], g)
         base = pathops.op(base, hal, pathops.PathOp.DIFFERENCE)
+    if "mark_pin_counter" in spec:
+        base = pin_counters(base, **spec["mark_pin_counter"])
     mark = pathops.simplify(union(base, acc))
     mb = mark.bounds
     open(os.path.join(out, "mark.svg"), "w").write(B.svg(B.d_of(mark), mb))
@@ -130,10 +229,34 @@ def build(spec, out):
     else:
         wm = spec["wordmark"]
         info = F.fetch(wm["font"], FONTS)
-        t = F.set_text(F.load(info, wm.get("weight", 500)), wm["text"], wm.get("tracking", 0))
-        wbase = pathops.Path()
-        t["pen"].replay(TransformPen(wbase.getPen(), (1, 0, 0, -1, 0, 0)))
+        font = F.load(info, wm.get("weight", 500))
+        text = wm["text"]
+        if wm.get("mirror_last"):
+            # Set all but the last letter, then the last letter reflected about its own ink box
+            # (Illustrator: Reflect, vertical axis), placed after the rest with an optical gap in em/1000.
+            t = F.set_text(font, text[:-1], wm.get("tracking", 0))
+            wbase = pathops.Path()
+            t["pen"].replay(TransformPen(wbase.getPen(), (1, 0, 0, -1, 0, 0)))
+            last = F.set_text(font, text[-1], 0)
+            lp = pathops.Path()
+            last["pen"].replay(TransformPen(lp.getPen(), (1, 0, 0, -1, 0, 0)))
+            lx0, _, lx1, _ = lp.bounds
+            _, _, rx1, _ = pathops.simplify(wbase).bounds
+            gap = wm.get("mirror_gap", 60) / 1000 * t["upem"]
+            # reflect: x -> (lx0 + lx1) - x, then move so its left ink edge sits `gap` after the rest's right ink edge
+            m = (-1, 0, 0, 1, (lx0 + lx1) - lx0 + rx1 + gap, 0)
+            wbase = union(wbase, xform(lp, m))
+        else:
+            t = F.set_text(font, text, wm.get("tracking", 0))
+            wbase = pathops.Path()
+            t["pen"].replay(TransformPen(wbase.getPen(), (1, 0, 0, -1, 0, 0)))
         wbase = pathops.simplify(wbase)
+        if "pin_counters" in wm:
+            # only the counters of the first and last letters (the two a's in "arena")
+            x0w, _, x1w, _ = wbase.bounds
+            edge = (x1w - x0w) * wm["pin_counters"].get("edge", 0.2)
+            sel = lambda b: b[2] < x0w + edge or b[0] > x1w - edge
+            wbase = pin_counters(wbase, select=sel, **{k: v for k, v in wm["pin_counters"].items() if k != "edge"})
         wacc = pathops.Path()
         cap = t["cap"]
         if wm.get("dot"):  # a square full stop in the accent (pixel), sitting on the baseline

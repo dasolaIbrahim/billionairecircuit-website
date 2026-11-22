@@ -3,7 +3,7 @@
  "checks": [
   {
    "check": "stroke at 16 px",
-   "value": "3.50 px",
+   "value": "3.77 px",
    "pass_at": ">= 1.5 px",
    "ok": true
   },
@@ -27,30 +27,30 @@
   },
   {
    "check": "nearest reference",
-   "value": "0.433",
+   "value": "0.487",
    "pass_at": "< 0.791",
    "ok": true
   }
  ],
  "nearest": [
   {
-   "score": 0.4329,
+   "score": 0.487,
    "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/pinterest/logo/rel_917678861593236106_2.jpg"
   },
   {
-   "score": 0.4037,
+   "score": 0.4279,
    "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/arena/marks-monograms-symbols/40416719.jpg"
   },
   {
-   "score": 0.2035,
-   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/pinterest/logo/651262796162539467.jpg"
+   "score": 0.2483,
+   "ref": "/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/work/refs/arena/marks-monograms-symbols/14716742.jpg"
   }
  ],
  "ink_share_by_size": {
-  "16": 0.6243,
-  "32": 0.62,
-  "64": 0.6207,
-  "512": 0.6198
+  "16": 0.6685,
+  "32": 0.6648,
+  "64": 0.6653,
+  "512": 0.6644
  },
  "ok": true
 }

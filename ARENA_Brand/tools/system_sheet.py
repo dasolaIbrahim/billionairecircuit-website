@@ -72,9 +72,14 @@ def sheet(key):
     info = json.load(open(os.path.join(b, "build.json")))
     p = info["palette"]
     ink, paper, acc, neu = p["ink"], p["paper"], p["accent"], p["neutral"]
+    # on the accent colour, use whichever of ink / paper passes 4.5:1 (review: never ink on violet)
+    from check_logo import contrast
+    ON_ACC = ink if contrast(ink, acc) >= 4.5 else paper
     style = STYLE[key[:2]]
     rec = json.load(open(os.path.join(D, "recipe.json")))
     base = A.build_shapes(rec["mark"], rec.get("grid", 48))
+    if "mark_pin_counter" in rec:
+        base = A.pin_counters(base, **rec["mark_pin_counter"])
     accp = A.build_shapes(rec["accent"], rec.get("grid", 48)) if rec.get("accent") else pathops.Path()
     if rec.get("accent") and rec.get("accent_halo"):
         hal = A.build_shapes([dict(c, r=c["r"] + rec["accent_halo"]) for c in rec["accent"]], 48)
@@ -102,10 +107,6 @@ def sheet(key):
             acc_l = pathops.op(acc_l, halo, pathops.PathOp.DIFFERENCE)
             body, cut = badge(pose, style, cx, cy, r)
             bcol = {"live": ac, "booked": ac, "closed": neu, "full": SIGNAL, "ask": ac}[pose]
-            if pose == "closed":
-                col = neu
-            if pose == "full":
-                col = SIGNAL
             if pose == "live":
                 body = pathops.op(body, A.build_shapes([{"shape": "rect", "x": cx - r * .3, "y": cy - r * .3, "w": r * .6, "h": r * .6}] if style == "square" else
                                                        [{"shape": "circle", "cx": cx, "cy": cy, "r": r * .38}], 1), pathops.PathOp.DIFFERENCE)
@@ -129,7 +130,7 @@ def sheet(key):
             if mode == "dark":
                 c = paper if c == ink else c
             elif mode == "accent":
-                c = ink
+                c = ON_ACC
             out.append(f'<path fill="{c}" d="{d}"/>')
         return f'<g transform="translate({tx:.2f} {ty:.2f}) scale({s:.4f})">{"".join(out)}</g>'
 
@@ -138,7 +139,7 @@ def sheet(key):
          f'<text x="28" y="52" font-family="Inter, sans-serif" font-weight="700" font-size="24" fill="#0B0D0E">ARENA: {esc(info["title"])} system ({key[:2]})</text>',
          f'<text x="28" y="76" font-family="Inter, sans-serif" font-size="13" fill="#0B0D0E">core mark in 3 modes | 6 poses = app statuses | lockups | tokens: ink {ink}, paper {paper}, accent {acc}, neutral {neu}, signal {SIGNAL} (fully booked only)</text>']
     dark_fg = paper
-    for i, (bg, fg, ac) in enumerate([(ink, dark_fg, acc), (acc, ink, ink), (paper, ink, acc)]):
+    for i, (bg, fg, ac) in enumerate([(ink, dark_fg, acc), (acc, ON_ACC, ON_ACC), (paper, ink, acc)]):
         cx = 143 + i * 254
         o.append(f'<circle cx="{cx}" cy="206" r="115" fill="{bg}"/>' + mark_g(cx - 115, 206 - 115, 230, fg, ac))
     for i, (bg, mode) in enumerate([(ink, "dark"), (acc, "accent"), (paper, "light")]):

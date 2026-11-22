@@ -1,7 +1,7 @@
 import os, sys, json, resvg_py, subprocess
 R='04_Directions'; T='/tmp/claude-0/-home-user-billionairecircuit-website/1f5040fb-3d73-5c1d-8813-8783f8070ea5/scratchpad/ov/'; os.makedirs(T,exist_ok=True)
 rows=[]
-for d in sorted(os.listdir(R)):
+for d in sorted(x for x in os.listdir(R) if os.path.isdir(f'{R}/{x}')):
     b=f'{R}/{d}/build'; p=json.load(open(f'{b}/build.json'))['palette']
     for f,w,bg in [('lockup-colour.svg',700,p['paper']),('mark-colour.svg',220,p['paper']),('mark.svg',220,'#ffffff')]:
         s=open(f'{b}/{f}').read()

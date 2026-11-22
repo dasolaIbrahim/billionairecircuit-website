@@ -2,10 +2,10 @@
  "name": "ARENA",
  "grid": 48,
  "mark_box": [
-  12.4,
-  3.5,
-  35.6,
-  43.5
+  2.072,
+  12.422,
+  45.928,
+  35.578
  ],
  "guides": {
   "x": [],
@@ -13,21 +13,23 @@
  },
  "kind": "wordmark",
  "wordmark": {
-  "text": "ARENA",
-  "font": "custom-constructed",
-  "weight": 0,
-  "cap": 100,
-  "licence": "original drawing (no font outlines)",
+  "text": "arena",
+  "font": "Syne",
+  "weight": 800,
+  "cap": 650,
+  "licence": "/root/.cache/make-logo/fonts/syne/OFL.txt",
   "reserved_names": []
  },
- "fonts": {},
+ "fonts": {
+  "Syne": "/root/.cache/make-logo/fonts/syne/OFL.txt"
+ },
  "title": "Match Day",
- "idea": "Condensed jersey-block capitals with chamfered shoulders, cut like stadium signage and shirt numerals; the twin As carry a gabled window, like the tunnel arch players walk out of.",
+ "idea": "Poster-weight extended lowercase in Syne ExtraBold: loud like a match-day poster. Each a has its counter filled and a location pin carved into the optical centre of the bowl; the last a is flipped to face back into the word, a deliberate tension, like two teams facing off.",
  "palette": {
   "ink": "#15121C",
   "paper": "#F1EADB",
-  "accent": "#FF4F9A",
+  "accent": "#1F9D63",
   "neutral": "#8E8798",
-  "tint": "#F6D9E6"
+  "tint": "#D7EEDF"
  }
 }
