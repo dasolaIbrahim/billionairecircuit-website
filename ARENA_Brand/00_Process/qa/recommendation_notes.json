@@ -1,0 +1,43 @@
+{
+ "cover_note": "Seven directions, each built on a grid from circles, rectangles and arcs with boolean operations, checked at 16 px, for contrast, and against 96 measured references. Each comes with its system: three circle modes, three lockups and six status poses. Pick one, or name a hybrid.",
+ "system_notes": {
+  "D1": "Court Lines. Monoline capitals drawn with the court's own geometry: the trapezoid key A, its crossbar the free-throw line, and the E's middle arm floating free like a painted lane line, lit in clay. Poses use square badges to match its square terminals.",
+  "D2": "Match Day (your direction). Syne ExtraBold lowercase, as in your post: loud, wide and friendly. Each a has its counter filled with a location pin carved into the optical centre of the bowl; both a's match. Accent: pitch green #1F9D63.",
+  "D3": "Live Pin. A map pin whose head is a stadium seen from above, with the live light at its shoulder. The poses replace the light with the status badge, so status always lives in the same place.",
+  "D4": "Convergence Crest. A bracket (four, two, one) carved in a shield: competition and verification in one sign. It scales up to trophy and Verified Arena plaque graphics.",
+  "D5": "Pin in the A. The first A's counter is a map pin standing on the crossbar (find); the last A holds the live light (play). The pin A stands alone as the app icon.",
+  "D6": "Centre Light. The centre circle from the floodlight gantry: two halves split by the halfway line, gathered round the lit spot. It holds best at 16 px of all seven. Never rotate it.",
+  "D7": "Pixel Scoreboard. the earlier pixel system cloned at your request: square pixels, stepped diagonals, lime / ink / bone / graphite / signal, a pixel pin mascot with six faces that are the app's statuses. Signal red is used only for 'fully booked'."
+ },
+ "status_note": [
+  "The app already speaks in colour: green = Live / Available, amber = Limited, red = Fully Booked, gray = Unavailable. A brand colour that sits on one of those makes every screen ambiguous.",
+  "Clear of the status colours: D5 violet, D6 LED cyan. Close to them, and needing a retune if chosen: D1 clay (near the booked red), D4 gold (near amber), D2 pitch green, D3 mint and D7 lime (all near live green).",
+  "If a green direction wins (D2, D3, D7), 'Live Now' becomes the brand green with a pulse, 'Available' moves to a neutral outline chip, and every status also carries a shape cue, so nothing relies on colour alone.",
+  "In the poses the logo never changes colour; only the badge does. Status belongs to the badge, not the brand."
+ ],
+ "ranking": [
+  "D5 Pin in the A (SAD 11/15): the most ownable; the word itself is the arena.",
+  "D6 Centre Light (11/15): the best symbol and the best at small sizes; palette and lockup face are the generic parts.",
+  "D1 Court Lines (9/15): tasteful but quieter; its clay sits too close to booked red.",
+  "D2 Match Day (rebuilt after the review to your brief: Syne, pin counters, green). Its old block-letter scores no longer apply; it now passes every check (nearest reference 0.641).",
+  "D3 Live Pin (7/15): reads clearly, but its pin and green sit in the most crowded part of the category.",
+  "D4 Convergence Crest (6/15): the shield can read as a trident or menorah, and its navy and gold are close to a major Nigerian bank's.",
+  "D7 Pixel Scoreboard (6/15): playful and systemised, but lime on black is the category's most common look; strongest as an illustration and sticker set."
+ ],
+ "fixed": [
+  "D5: crossbar under the pin thickened (pin raised, head reduced) so it matches the stems; E–N and R–E tightened.",
+  "D1: N–A gap opened from 4 to 8 units.",
+  "D6: the halfway-line cut widened from 4 to 6 on the 48 grid, so it survives 16 px.",
+  "All poses: the logo no longer turns red or gray; only the badge carries status.",
+  "Colour on accent: bone or ink is chosen by contrast, so there is never ink on violet (2.8:1).",
+  "Flags recorded (fix if chosen): D4 trident and menorah reading, and bank navy and gold; D3 and D7 green against betting and flag green; D7 mascot face can read as an alien;."
+ ],
+ "recommendation": "Take D5 Pin in the A forward, with D6's Centre Light as a secondary symbol for live states and motion. If you want more noise and attitude for social, D2's Syne voice is a strong campaign face. It shouldn't be the logo as well.",
+ "recommendation_detail": [
+  "Why D5: it's the only direction where the name, the place and the product moment (find, then it's on) are one drawing. Its extracted pin A is a strong, unusual app icon and passes every small-size check.",
+  "Why pair it with D6: the split centre circle animates beautifully as the live pulse, so the app has a motion signature without changing the logo.",
+  "Violet keeps the brand clear of every status colour and of the crowded green, orange and blue territories in the audit. Bone on violet only.",
+  "The reviewer's alternative hybrid, 'Arch & Centre Light' (D5's arch letters with round counters and no pin, plus D6 as the symbol), is cleaner but loses D5's best idea. It's available if you prefer restraint.",
+  "This is a recommendation, not a decision: the pick is yours."
+ ]
+}

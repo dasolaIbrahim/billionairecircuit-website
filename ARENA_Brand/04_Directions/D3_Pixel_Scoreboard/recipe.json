@@ -1,0 +1,231 @@
+{
+ "name": "ARENA",
+ "kind": "symbol",
+ "title": "Pixel Scoreboard",
+ "idea": "A square-pixel pin mascot lit like a stadium LED scoreboard, with six poses that are the app's own statuses (available, live, booked, closed, fully booked, ask).",
+ "grid": 48,
+ "mark": [
+  {
+   "shape": "rect",
+   "x": 13.75,
+   "y": 2.75,
+   "w": 16.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 8.25,
+   "y": 5.5,
+   "w": 27.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 5.5,
+   "y": 8.25,
+   "w": 33.0,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 2.75,
+   "y": 11.0,
+   "w": 38.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 2.75,
+   "y": 13.75,
+   "w": 38.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 2.75,
+   "y": 16.5,
+   "w": 38.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 2.75,
+   "y": 19.25,
+   "w": 38.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 2.75,
+   "y": 22.0,
+   "w": 38.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 5.5,
+   "y": 24.75,
+   "w": 33.0,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 5.5,
+   "y": 27.5,
+   "w": 33.0,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 8.25,
+   "y": 30.25,
+   "w": 27.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 11.0,
+   "y": 33.0,
+   "w": 22.0,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 13.75,
+   "y": 35.75,
+   "w": 16.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 16.5,
+   "y": 38.5,
+   "w": 11.0,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 19.25,
+   "y": 41.25,
+   "w": 5.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 19.25,
+   "y": 44.0,
+   "w": 5.5,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 16.5,
+   "y": 11.0,
+   "w": 11.0,
+   "h": 2.75,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 13.75,
+   "y": 13.75,
+   "w": 16.5,
+   "h": 2.75,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 13.75,
+   "y": 16.5,
+   "w": 16.5,
+   "h": 2.75,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 13.75,
+   "y": 19.25,
+   "w": 16.5,
+   "h": 2.75,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 16.5,
+   "y": 22.0,
+   "w": 11.0,
+   "h": 2.75,
+   "op": "cut"
+  },
+  {
+   "shape": "rect",
+   "x": 19.25,
+   "y": 24.75,
+   "w": 5.5,
+   "h": 2.75,
+   "op": "cut"
+  }
+ ],
+ "accent": [
+  {
+   "shape": "rect",
+   "x": 38.5,
+   "y": 2.75,
+   "w": 2.75,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 41.25,
+   "y": 0.0,
+   "w": 2.75,
+   "h": 2.75,
+   "op": "add"
+  },
+  {
+   "shape": "rect",
+   "x": 35.75,
+   "y": 0.0,
+   "w": 2.75,
+   "h": 2.75,
+   "op": "add"
+  }
+ ],
+ "wordmark": {
+  "text": "arena",
+  "font": "Familjen Grotesk",
+  "weight": 700,
+  "tracking": -30,
+  "dot": true,
+  "dot_size": 0.2
+ },
+ "lockup": {
+  "mark_scale": 1.9,
+  "gap": 0.7
+ },
+ "palette": {
+  "ink": "#0B0D0E",
+  "paper": "#F2F5EE",
+  "accent": "#B8FF2C",
+  "neutral": "#1B1F21",
+  "tint": "#E4E9DC",
+  "signal": "#FF5A4F"
+ }
+}

@@ -13,9 +13,9 @@ This also matches make-logo's own default of six.
 | D4 | Symbol B | Convergence / Bracket Crest | bracket + convergence + crest |
 | D5 | Integrated lockup | Symbol inside the letterform | A-counter + pin / goalposts |
 | D6 | Symbol C (new) | Centre Light: centre circle seen from above as a floodlit "live" signal | centre circle + floodlight + gather |
-| D7 | Symbol + mascot (user request, mid-run) | Pixel Scoreboard: the GhostRevenue pixel system cloned for ARENA | pixel pin + six status poses |
+| D7 | Symbol + mascot (user request, mid-run) | Pixel Scoreboard: the earlier pixel system cloned for ARENA | pixel pin + six status poses |
 
-User additions (2026-11-22, mid-run): (1) clone the GhostRevenue "pixel green" direction as a direction → D7;
+User additions (2026-11-22, mid-run): (1) clone the earlier pixel direction as a direction → D7;
 (2) give every direction the same depth: three circle modes, three lockups, six poses → `Dn_system_sheet.png` in each folder.
 
 Why D6 is a third symbol: the brief's strongest product moment ("Live Now" / the lit court) and the crowd/ring
@@ -39,3 +39,6 @@ make-logo scripts (build_logo, check_logo, distance, measure, calibrate, logo_bo
 shapely, skia-pathops, fonttools + uharfbuzz, svgpathtools, picosvg, cairosvg, resvg-py, coloraide (OKLCH, WCAG, APCA),
 Pillow, numpy, scikit-image, potrace, ImageMagick, ffmpeg, yt-dlp, Playwright/Chromium (PDF), svgo (npx).
 Fonts: Google Fonts OFL families only, OFL.txt saved per family.
+
+Renumbered 2026-11-22 (user): D1 Court Lines · D2 Match Day · D3 Pixel Scoreboard · D4 Live Pin · D5 Convergence Crest ·
+D6 Pin in the A · D7 Centre Light. The table above uses the original numbering.

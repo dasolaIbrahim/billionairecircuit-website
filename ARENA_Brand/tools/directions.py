@@ -79,7 +79,7 @@ D["D2_Wordmark_MatchDay"] = {
 }
 
 # D3 ----------------------------------------------------------------------------------------------------------
-D["D3_Symbol_LivePin"] = {
+D["D4_Symbol_LivePin"] = {
     "name": "ARENA", "kind": "symbol", "title": "Live Pin",
     "idea": "A map pin whose head is a stadium seen from above (the racetrack shape geometry literally calls a 'stadium'), with a live light switched on at its shoulder: there's a game near you, and it's on now.",
     "grid": 48,
@@ -91,7 +91,7 @@ D["D3_Symbol_LivePin"] = {
 }
 
 # D4 ----------------------------------------------------------------------------------------------------------
-D["D4_Symbol_ConvergenceCrest"] = {
+D["D5_Symbol_ConvergenceCrest"] = {
     "name": "ARENA", "kind": "symbol", "title": "Convergence Crest",
     "idea": "A tournament bracket (four entrants, two semis, one final) carved into a shield: everyone meets here, the path resolves to one winner, and the venue is verified.",
     "grid": 48,
@@ -105,7 +105,7 @@ D["D4_Symbol_ConvergenceCrest"] = {
 pinA = partial(T.d5_A, w=80)
 w5, wid5 = T.word([pinA, T.d5_R, T.d5_E, T.d5_N, partial(T.d5_A, w=80, counter="o")], [6, 8, 9, 6])
 x_lastA = wid5 - 80
-D["D5_Lockup_Integrated"] = {
+D["D6_Lockup_Integrated"] = {
     "name": "ARENA", "kind": "integrated", "title": "Pin in the A",
     "idea": "The first A's counter is a map pin standing on the A's crossbar (find); the last A's counter holds the live light (play). Find it, then it's on: one word, the whole product.",
     "grid": 48, "mark": letter_mark(pinA),
@@ -116,7 +116,7 @@ D["D5_Lockup_Integrated"] = {
 }
 
 # D6 ----------------------------------------------------------------------------------------------------------
-D["D6_Symbol_CentreLight"] = {
+D["D7_Symbol_CentreLight"] = {
     "name": "ARENA", "kind": "symbol", "title": "Centre Light",
     "idea": "The centre circle seen from the floodlight gantry: two halves split by the halfway line, gathered around the spot where every game starts, and the spot is lit.",
     "grid": 48,
@@ -130,10 +130,9 @@ D["D6_Symbol_CentreLight"] = {
 
 # D7 ----------------------------------------------------------------------------------------------------------
 _s, _a = PX.pose("live")
-D["D7_Pixel_Scoreboard"] = {
+D["D3_Pixel_Scoreboard"] = {
     "name": "ARENA", "kind": "symbol", "title": "Pixel Scoreboard",
-    "idea": "The GhostRevenue pixel system cloned for ARENA: a square-pixel pin mascot lit like a stadium LED scoreboard, with six poses that are the app's own statuses (available, live, booked, closed, fully booked, ask).",
-    "cloned_from": "GhostRevenue pixel ghost system (user's own prior work): grid, tokens, modes, pose system, type",
+    "idea": "A square-pixel pin mascot lit like a stadium LED scoreboard, with six poses that are the app's own statuses (available, live, booked, closed, fully booked, ask).",
     "grid": 48, "mark": _s, "accent": _a,
     "wordmark": {"text": "arena", "font": "Familjen Grotesk", "weight": 700, "tracking": -30, "dot": True, "dot_size": 0.2},
     "lockup": {"mark_scale": 1.9, "gap": 0.7},

@@ -171,17 +171,16 @@ def sheet(name, items, grid, cols):
         files.append((tile(s, grid, lab), lab))
     args = ["montage"]
     for f, lab in files:
-        args += ["-label", lab.split("_", 1)[1], f]
-    args += ["-tile", f"{cols}x", "-geometry", "+10+10", "-pointsize", "14", "-background", "#f3efe7",
+        args += [f]  # no labels or file names on the sheets
+    args += ["-tile", f"{cols}x", "-geometry", "+10+10", "-background", "#f3efe7",
              os.path.join(OUT, f"{name}_contact_sheet.png")]
     subprocess.run(args, check=True)
     return len(files)
 
 
-n3 = sheet("D3_Symbol_LivePin", d3_variants(), 48, 10)
-n4 = sheet("D4_Symbol_ConvergenceCrest", d4_variants(), 48, 10)
-n6 = sheet("D6_Symbol_CentreLight", d6_variants(), 48, 10)
+n3 = sheet("D4_Symbol_LivePin", d3_variants(), 48, 10)
+n4 = sheet("D5_Symbol_ConvergenceCrest", d4_variants(), 48, 10)
+n6 = sheet("D7_Symbol_CentreLight", d6_variants(), 48, 10)
 n1 = sheet("D1_Wordmark_CourtLines", wm_variants("D1"), 100, 3)
-n2 = sheet("D2_Wordmark_MatchDay", wm_variants("D2"), 100, 3)
-n5 = sheet("D5_Lockup_Integrated", wm_variants("D5"), 100, 3)
-print(n1, n2, n3, n4, n5, n6)
+n5 = sheet("D6_Lockup_Integrated", wm_variants("D5"), 100, 3)
+print(n1, n3, n4, n5, n6)

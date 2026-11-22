@@ -80,7 +80,7 @@ def front():
       <tr><td>D4 Convergence Crest</td><td>Symbol</td><td>bracket + converge + crest → a bracket carved in a shield</td><td>Everyone meets here; fair; verified</td></tr>
       <tr><td>D5 Pin in the A</td><td>Integrated lockup</td><td>A counter + pin, last A + live light</td><td>Find it, then it's on: the whole product in one word</td></tr>
       <tr><td>D6 Centre Light</td><td>Symbol</td><td>centre circle + floodlight + gather</td><td>Where every game starts, lit</td></tr>
-      <tr><td>D7 Pixel Scoreboard</td><td>Symbol + mascot</td><td>The GhostRevenue pixel system, cloned (your request): pin mascot + 6 poses</td><td>Playful, systemised, LED-scoreboard energy</td></tr>
+      <tr><td>D7 Pixel Scoreboard</td><td>Symbol + mascot</td><td>the earlier pixel system, cloned (your request): pin mascot + 6 poses</td><td>Playful, systemised, LED-scoreboard energy</td></tr>
       </table><p style="margin-top:22px;color:#6a6760">40+ thumbnails were drawn per symbol direction and 6–12 per wordmark before these were picked; the contact sheets follow. Every direction was built on a grid from rectangles, circles, arcs and polygons with boolean operations (no traced reference, no stock icon, no font outlines in D1, D2 and D5).</p></div>"""))
     for d in ["D3_Symbol_LivePin", "D4_Symbol_ConvergenceCrest", "D6_Symbol_CentreLight"]:
         pp.append(page(f'<h2 style="margin-bottom:16px">Sketches · {d[3:].replace("_", " ")}</h2><img class="contact" src="{img(os.path.join(BR, "03_Sketches", d + "_contact_sheet.png"))}">'))

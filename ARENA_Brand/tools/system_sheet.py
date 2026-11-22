@@ -1,6 +1,6 @@
 """System sheet per direction: core mark in 3 circle modes, 3 lockups, 6 poses (= ARENA's statuses).
 
-D7 uses its own pixel poses (pixel_sheet.py). The others get status poses constructed in their own geometry:
+D3 uses its own pixel poses (pixel_sheet.py). The others get status poses constructed in their own geometry:
 a status badge knocked into the mark's shoulder (Offset Path + Minus Front), square or round to match the mark's
 corner logic.
 
@@ -20,7 +20,7 @@ import build_logo as B  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "04_Directions")
 SIGNAL = "#E5484D"
-STYLE = {"D1": "square", "D2": "square", "D3": "round", "D4": "square", "D5": "round", "D6": "round"}
+STYLE = {"D1": "square", "D2": "square", "D4": "round", "D5": "square", "D6": "round", "D7": "round"}
 POSES = [("available", "courts free near you"), ("live", "people are playing now"), ("booked", "you're in"),
          ("closed", "unavailable"), ("full", "fully booked"), ("ask", "'nearest 5-a-side?'")]
 
@@ -97,7 +97,7 @@ def sheet(key):
         if pose and pose != "available":
             r = max(mw, mh) * 0.16
             cx, cy = x1 - r * 0.35, y0 + r * 0.35
-            if key.startswith("D3"):  # the live light already sits on the shoulder: the badge replaces it
+            if key.startswith("D4"):  # the live light already sits on the shoulder: the badge replaces it
                 acc_l = pathops.Path()
                 cx, cy = rec["accent"][0]["cx"], rec["accent"][0]["cy"]
                 r = rec["accent"][0]["r"] * 1.25
@@ -135,9 +135,7 @@ def sheet(key):
         return f'<g transform="translate({tx:.2f} {ty:.2f}) scale({s:.4f})">{"".join(out)}</g>'
 
     W, H = 1560, 720
-    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><rect width="100%" height="100%" fill="#D9D9D9"/>',
-         f'<text x="28" y="52" font-family="Inter, sans-serif" font-weight="700" font-size="24" fill="#0B0D0E">ARENA: {esc(info["title"])} system ({key[:2]})</text>',
-         f'<text x="28" y="76" font-family="Inter, sans-serif" font-size="13" fill="#0B0D0E">core mark in 3 modes | 6 poses = app statuses | lockups | tokens: ink {ink}, paper {paper}, accent {acc}, neutral {neu}, signal {SIGNAL} (fully booked only)</text>']
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H-72}" viewBox="0 72 {W} {H-72}"><rect width="{W}" height="{H}" fill="#D9D9D9"/>']
     dark_fg = paper
     for i, (bg, fg, ac) in enumerate([(ink, dark_fg, acc), (acc, ON_ACC, ON_ACC), (paper, ink, acc)]):
         cx = 143 + i * 254
@@ -153,7 +151,7 @@ def sheet(key):
     o.append("</svg>")
     s = "".join(o)
     open(os.path.join(D, f"{key[:2]}_system_sheet.svg"), "w").write(s)
-    open(os.path.join(D, f"{key[:2]}_system_sheet.png"), "wb").write(bytes(resvg_py.svg_to_bytes(svg_string=s, width=W)))
+    open(os.path.join(D, f"{key[:2]}_system_sheet.png"), "wb").write(bytes(resvg_py.svg_to_bytes(svg_string=s, width=W * 2)))
 
 
 if __name__ == "__main__":

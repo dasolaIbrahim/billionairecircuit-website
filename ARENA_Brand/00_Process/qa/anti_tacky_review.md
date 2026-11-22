@@ -238,7 +238,7 @@ The marks are not the main source of tackiness here. **The system around them is
 
 ---
 
-### D7 Pixel Scoreboard: pixel pin mascot cloned from GhostRevenue, lime on ink
+### D7 Pixel Scoreboard: pixel pin mascot cloned from an earlier project, lime on ink
 
 **SAD: Simple 3 · Appropriate 1 · Distinct 2 = 6/15**
 
@@ -256,7 +256,7 @@ The marks are not the main source of tackiness here. **The system around them is
 
   This is the exact "hype dialect / betting" look the audit says Nigeria reads as a bookie.
 - **Lime-on-navy/black is Playtomic's look** (lime `#D4FF3A` on navy), and Playtomic is the closest global competitor. It is also Veo's accent.
-- **Cloning another client brand's system** produces a portfolio sameness. Anyone who knows GhostRevenue will see a reskin, and it undermines "Trusted".
+- **Cloning another client brand's system** produces a portfolio sameness. Anyone who knows an earlier project will see a reskin, and it undermines "Trusted".
 - **The face reads as an alien, skull or ghost head**, not a pin. The "booked" pose (red, X-eyes) is the **dead** emoji, and it uses signal red, which in the UI means *Fully Booked*, not "you're booked". That is a semantic error.
 - **The lime is unusable on light fields.** Lime on bone is **1.10:1**, so it disappears and the light-mode mark has to fall back to ink. At hue 80°, lime on the map will read as "available".
 - **The wordmark is a cliché.** Lowercase "arena." with a coloured full stop is the most over-used start-up device of the decade; it appears on the moodboard itself (kaiko.). Familjen Grotesk at −30 tracking crowds e/n.
@@ -349,6 +349,6 @@ The fallback, if the client wants a lighter, more premium wordmark, is the D6 sy
    - D3: flag and betting green.
    - D6: light blue + green + white reads as APC.
    - D2: house/H reading, and a 0.756 reference distance, too close to the limit to file.
-   - D7: alien/dead face, and the Playtomic and GhostRevenue sameness.
+   - D7: alien/dead face, and the Playtomic and an earlier project sameness.
 
    Mark which ones are fixed and which are retired.
